@@ -13,6 +13,9 @@ who have enrolled the Design and Testing subject of the Software Engineering cur
 University of Seville.  This project helps them start working on their new information system 
 projects.
 
+Acme Starters, Inc.  is a fictitious company that specialises in helping entrepreneurs
+publicise their ideas. 
+
 To get this project up and running, please follow the guideline in the theory/lab 
 materials, taking into account that you must link the appropriate version of 
 the Acme-Framework excluding the following resources:

@@ -34,7 +34,6 @@
 		<acme:footer-option icon="fa fa-language" code="master.footer.label.spanish" action="/?locale=es"/>
 	</acme:footer-subpanel>
 
-	<!-- Removed image-based footer logo and replaced with text-only company name -->
 	<div class="footer-company">
 		<strong><acme:print code="master.company.name"/></strong>
 		<acme:footer-copyright code="master.company.name"/>
