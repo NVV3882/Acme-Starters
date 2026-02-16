@@ -8,8 +8,8 @@ public interface AuditReportRepository extends CrudRepository<AuditReport, Integ
 	@Query("SELECT SUM(s.hours) FROM AuditSection s WHERE s.report.id = ?1")
 	Integer computeHours(Integer reportId);
 
-	// Compute months as decimal using MariaDB/ MySQL functions: difference in seconds divided by average seconds per month (~30.44 days)
+	//Computa meses a decimal con funciones de MySQL: la diferencia en segundos entre la media de segundos por mes
 	@Query(value = "SELECT (UNIX_TIMESTAMP(end_moment) - UNIX_TIMESTAMP(start_moment)) / 2629746.0 FROM audit_report WHERE id = ?1", nativeQuery = true)
-	Double computeMonthsActive(Integer reportId);
+	Double computeMonthsActive(Integer reportId); //TODO: HACERLO CON MOMENT HELPER
 
 }
