@@ -1,6 +1,6 @@
 # LICENSE.txt
 
-Copyright (C) 2012-2026 Rafael Corchuelo.
+Copyright (C) 2026 Grupo G3-59 – Acme-Starters-C.
 
 In keeping with the traditional purpose of furthering education and research, it is
 the policy of the copyright owner to permit non-commercial use and redistribution of
