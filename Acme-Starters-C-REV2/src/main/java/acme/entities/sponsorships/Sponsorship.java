@@ -20,6 +20,7 @@ import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
+import acme.constraints.ValidTicker;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -31,7 +32,7 @@ public class Sponsorship extends AbstractEntity {
 	private static final long		serialVersionUID	= 1L;
 
 	@Mandatory
-	//@ValidTicker
+	@ValidTicker
 	@Column(unique = true)
 	private String					ticker;
 
@@ -73,7 +74,7 @@ public class Sponsorship extends AbstractEntity {
 	//	@Transient
 	//	public Double monthsActive() {
 	//		Date fecha = this.startMoment;
-	//
+	//		fecha.
 	//	}
 
 
