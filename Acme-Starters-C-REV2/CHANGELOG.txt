@@ -12,7 +12,7 @@
 
 - 26.1.0	Upgraded to the new version of the Acme Framework.  
 - 26.2.0	Upgraded to the new version of the Acme Framework.  
-
+- Release 16/02/2026
 ** Year 2025 ******************************************************************
 
 - 25.1.0	Upgraded to the new version of the Acme framework. Fixed a bug that allowed
