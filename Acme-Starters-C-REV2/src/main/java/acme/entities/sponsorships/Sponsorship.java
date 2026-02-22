@@ -20,6 +20,8 @@ import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidSponsorship;
 import acme.constraints.ValidTicker;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,6 +29,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidSponsorship
 public class Sponsorship extends AbstractEntity {
 
 	private static final long		serialVersionUID	= 1L;
@@ -39,7 +42,7 @@ public class Sponsorship extends AbstractEntity {
 	@Mandatory
 	//@ValidHeader
 	@Column
-	private String					title;
+	private String					name;
 
 	@Mandatory
 	//@ValidText
@@ -57,7 +60,7 @@ public class Sponsorship extends AbstractEntity {
 	private Date					endMoment;
 
 	@Optional
-	//@ValidUrl
+	@ValidUrl
 	@Column
 	private String					moreInfo;
 
@@ -71,12 +74,16 @@ public class Sponsorship extends AbstractEntity {
 	@Autowired
 	private SponsorshipRepository	repository;
 
-	//	@Transient
-	//	public Double monthsActive() {
-	//		Date fecha = this.startMoment;
-	//		fecha.
-	//	}
 
+	@Transient
+	public Double monthsActive() {
+		Date fechaini = this.startMoment;
+		Date fechafin = this.endMoment;
+		if (fechaini == null && fechafin == null)
+			return null;
+		return 0.0;
+
+	}
 
 	@Transient
 	public Money totalMoney() {
@@ -88,7 +95,11 @@ public class Sponsorship extends AbstractEntity {
 				Double suma = result.getAmount() + don.getMoney().getAmount();
 				result.setAmount(suma);
 			}
-
+		if (result == null) {
+			Money nada = new Money();
+			nada.setAmount(0.0);
+			result = nada;
+		}
 		return result;
 	}
 
@@ -99,8 +110,7 @@ public class Sponsorship extends AbstractEntity {
 	@ManyToOne(optional = false)
 	private Sponsor			sponsor;
 
-	@Mandatory
 	@Valid
-	@OneToMany()
+	@OneToMany(mappedBy = "sponsorship")
 	private List<Donation>	donations;
 }

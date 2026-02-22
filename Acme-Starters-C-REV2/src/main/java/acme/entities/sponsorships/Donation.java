@@ -21,15 +21,17 @@ public class Donation extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
+	//@ValidHeader
 	@Column
 	private String				name;
 
 	@Mandatory
+	//@ValidText
 	@Column
 	private String				notes;
 
 	@Mandatory
-	@ValidMoney()
+	@ValidMoney(min = 0.01)
 	@Column
 	private Money				money;
 

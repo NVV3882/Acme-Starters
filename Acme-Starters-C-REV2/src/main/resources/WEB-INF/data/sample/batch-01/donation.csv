@@ -1,0 +1,4 @@
+key,key:sponsorship,name,notes,money.amount,money.currency,kind
+donation-01,sponsorship-01,Initial Contribution,First support payment.,500.0,EUR,ALTRUIST
+donation-02,sponsorship-02,Second Contribution,Additional funding round.,750.0,EUR,REWARDED
+donation-03,sponsorship-03,Startup Support,Quarterly sponsorship payment.,1200.0,EUR,CELEBRATED
