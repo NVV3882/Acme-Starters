@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidNumber;
+import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,7 +22,7 @@ public class Milestone extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	// @ValidHeader
+	@ValidHeader
 	@Column
 	private String				title;
 
