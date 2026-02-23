@@ -25,7 +25,7 @@ import org.hibernate.validator.constraints.Length;
 
 public @interface ValidText {
 
-	String message() default "{acme.validation.starter.ticker.message}";
+	String message() default "{acme.validation.starter.Text.message}";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

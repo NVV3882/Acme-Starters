@@ -1,13 +1,16 @@
 
-package acme.entities.student1;
+package acme.entities.invention;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
+import acme.client.components.validation.ValidMoney;
+import acme.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,23 +22,27 @@ public class Part extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
+	//@ValidHeader
 	@Column
 	private String				name;
 
 	@Mandatory
+	@ValidText
 	@Column
 	private String				description;
 
 	@Mandatory
+	@ValidMoney(min = 0.01)
 	@Column
 	private Money				cost;
 
 	@Mandatory
+	@Valid
 	@Column
 	private PartKind			kind;
 
 	@Mandatory
-	@ManyToOne
+	@ManyToOne(optional = false)
 	private Invention			invention;
 
 }

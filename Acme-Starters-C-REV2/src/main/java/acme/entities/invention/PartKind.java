@@ -1,5 +1,5 @@
 
-package acme.entities.student1;
+package acme.entities.invention;
 
 public enum PartKind {
 	CORE, MANDATORY, OPTIONAL;
