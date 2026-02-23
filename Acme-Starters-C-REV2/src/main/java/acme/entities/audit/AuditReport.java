@@ -20,6 +20,10 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidHeader;
+import acme.constraints.ValidText;
+import acme.constraints.ValidTicker;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -35,17 +39,17 @@ public class AuditReport extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	//@ValidTicker
+	@ValidTicker
 	@Column(unique = true)
 	private String					ticker;
 
 	@Mandatory
-	//@ValidHeader
+	@ValidHeader
 	@Column
 	private String					name;
 
 	@Mandatory
-	//@ValidText
+	@ValidText
 	@Column
 	private String					description;
 
@@ -60,7 +64,7 @@ public class AuditReport extends AbstractEntity {
 	private Date					endMoment;
 
 	@Optional
-	//@ValidUrl
+	@ValidUrl
 	@Column
 	private String					moreInfo;
 
@@ -73,7 +77,7 @@ public class AuditReport extends AbstractEntity {
 
 	@Transient
 	@Autowired
-	private AuditReportRepository	repository;
+	private AuditSectionRepository	repository;
 
 	//	@Transient
 	//	public Double monthsActive() {
