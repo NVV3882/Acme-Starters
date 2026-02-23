@@ -1,6 +1,7 @@
 
 package acme.entities.campaign;
 
+import java.time.Duration;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -15,7 +16,9 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidTicker;
 import acme.realms.Spokesperson;
@@ -68,13 +71,17 @@ public class Campaign extends AbstractEntity {
 
 
 	@Transient
-	public Double monthsActive() {
+	private Double monthsActive() {
 		Date fechaini = this.startMoment;
 		Date fechafin = this.endMoment;
-		if (fechaini == null && fechafin == null)
-			return null;
+		Duration d = MomentHelper.computeDuration(fechaini, fechafin);
 		return 0.0;
-
 	}
+
+
+	@Mandatory
+	@ValidNumber(min = 0.00, max = 10000.00)
+	@Column
+	private double effort;
 
 }
