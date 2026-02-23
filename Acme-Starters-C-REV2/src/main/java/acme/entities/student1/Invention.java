@@ -1,5 +1,5 @@
 
-package acme.entities.invention;
+package acme.entities.student1;
 
 import java.util.Date;
 
