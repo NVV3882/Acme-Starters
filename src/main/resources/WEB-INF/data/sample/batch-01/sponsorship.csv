@@ -1,0 +1,4 @@
+key,key:sponsor,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
+sponsorship-01,sponsor-01,AC25-STARTER,TechCorp,Strategic sponsorship agreement to support innovative startup visibility.,2025/01/01 00:00,2025/12/31 23:59,https://www.techcorp.com,true
+sponsorship-02,sponsor-01,IN26-GROWTH,InnovateX,Long term partnership to promote early stage tech projects.,2025/02/01 00:00,2025/11/30 23:59,https://www.innovatex.com,true
+sponsorship-03,sponsor-02,VC23-FUNDING,VentureCapitalPro,Financial support program for scalable digital businesses.,2025/03/01 00:00,2025/10/31 23:59,https://www.vcpro.com,true
