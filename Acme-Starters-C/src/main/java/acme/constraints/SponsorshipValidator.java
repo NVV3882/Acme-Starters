@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
-import acme.entities.sponsorships.Donation;
 import acme.entities.sponsorships.Sponsorship;
 import acme.entities.sponsorships.SponsorshipRepository;
 
@@ -33,7 +32,13 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 		if (patrocinio == null)
 			result = true;
 		else {
+			{
+				boolean publicadoConDonaciones = true;
 
+				publicadoConDonaciones = patrocinio.getDraftMode() || this.repositorio.sumDonationsOfSponsorship(patrocinio.getId()) == null;
+
+				super.state(context, publicadoConDonaciones, "*", "acme.validation.sponsorship.publicadoConDonaciones.message");
+			}
 			{
 				boolean patrocinioUnico;
 				Sponsorship patrocinioExistente;
@@ -44,27 +49,20 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 				super.state(context, patrocinioUnico, "ticker", "acme.validation.sponsorship.duplicated-ticker.message");
 			}
 			{
-				boolean donacionesCorrectas;
-				java.util.List<Donation> donations;
+				boolean sumaDonacionesCorrectas;
 
-				donations = this.repositorio.findDonationsBySponsorshipId(patrocinio.getId());
-				donacionesCorrectas = donations != null && !donations.isEmpty();
+				Double sumaReal = this.repositorio.sumDonationsOfSponsorship(patrocinio.getId());
+				Double sumaMemoria = patrocinio.totalMoney().getAmount();
+				sumaDonacionesCorrectas = sumaReal.equals(sumaMemoria);
 
-				super.state(context, donacionesCorrectas, "*", "acme.validation.sponsorship.donacionesCorrectas.message");
+				super.state(context, sumaDonacionesCorrectas, "*", "acme.validation.sponsorship.sumaDonacionesCorrectas.message");
 			}
 			{
-				boolean soloEuros = true;
-				java.util.List<Donation> donations;
+				boolean sonDonacionesEnEuros;
 
-				donations = this.repositorio.findDonationsBySponsorshipId(patrocinio.getId());
-				if (donations != null) {
-					int noEuro = 0;
-					for (Donation don : donations)
-						if (!don.getMoney().getCurrency().equals("EUR"))
-							noEuro += 1;
-					soloEuros = noEuro == 0;
-				}
-				super.state(context, soloEuros, "*", "acme.validation.sponsorship.soloEuros.message");
+				sonDonacionesEnEuros = this.repositorio.countNonEuroDonations(patrocinio.getId()) == 0;
+
+				super.state(context, sonDonacionesEnEuros, "*", "acme.validation.sponsorship.sonDonacionesEnEuros.message");
 			}
 			result = !super.hasErrors(context);
 		}

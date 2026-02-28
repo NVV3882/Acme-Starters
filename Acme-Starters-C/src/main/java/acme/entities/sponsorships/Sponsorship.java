@@ -2,12 +2,10 @@
 package acme.entities.sponsorships;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -87,19 +85,9 @@ public class Sponsorship extends AbstractEntity {
 
 	@Transient
 	public Money totalMoney() {
-		Money result = null;
-		for (Donation don : this.donations)
-			if (result == null)
-				result = don.getMoney();
-			else {
-				Double suma = result.getAmount() + don.getMoney().getAmount();
-				result.setAmount(suma);
-			}
-		if (result == null) {
-			Money nada = new Money();
-			nada.setAmount(0.0);
-			result = nada;
-		}
+		Money result = new Money();
+		result.setAmount(this.repository.sumDonationsOfSponsorship(this.getId()));
+		result.setCurrency("EUR");
 		return result;
 	}
 
@@ -108,9 +96,6 @@ public class Sponsorship extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
-	private Sponsor			sponsor;
+	private Sponsor sponsor;
 
-	@Valid
-	@OneToMany(mappedBy = "sponsorship")
-	private List<Donation>	donations;
 }
