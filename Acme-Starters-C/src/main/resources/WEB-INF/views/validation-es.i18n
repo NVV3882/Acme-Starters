@@ -1,0 +1,12 @@
+# validation-es.i18n
+
+acme.validation.header.message  	= Debe tener entre 1 y 75 caracteres
+acme.validation.text.message   		= Debe tener entre 1 y 255 caracteres
+acme.validation.ticker.message	    = La referencia debería seguir el siguiente patrón: XX00-AAAAA (dos letras mayúsculas, dos dígitos, un guion y entre 5 y 10 caracteres alfanuméricos)
+
+
+acme.validation.sponsorship.duplicated-ticker.message  = Referencia ya usada
+acme.validation.sponsorship.publicado-sin-donaciones.message = No se puede publicar un sponsorship sin al menos una donación
+acme.validation.sponsorship.intervalo-correcto-tiempo.message = El intervalo del comienzo y el final de un patrocinio se debe encontrar en un momento futuro desde que se publica el patrocinio
+acme.validation.sponsorship.suma-donaciones-correctas.message = El dinero total del patrocinio debe ser igual a la suma de las donaciones del mismo
+acme.validation.sponsorship.son-donaciones-en-euros.message = Las donaciones de un patrocinio deben de ser en euros

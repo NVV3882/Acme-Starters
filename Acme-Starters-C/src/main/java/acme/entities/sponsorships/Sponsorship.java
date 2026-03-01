@@ -19,7 +19,9 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidHeader;
 import acme.constraints.ValidSponsorship;
+import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
 import lombok.Getter;
 import lombok.Setter;
@@ -38,12 +40,12 @@ public class Sponsorship extends AbstractEntity {
 	private String					ticker;
 
 	@Mandatory
-	//@ValidHeader
+	@ValidHeader
 	@Column
 	private String					name;
 
 	@Mandatory
-	//@ValidText
+	@ValidText
 	@Column
 	private String					description;
 
@@ -86,7 +88,10 @@ public class Sponsorship extends AbstractEntity {
 	@Transient
 	public Money totalMoney() {
 		Money result = new Money();
-		result.setAmount(this.repository.sumDonationsOfSponsorship(this.getId()));
+		Double suma = this.repository.sumDonationsOfSponsorship(this.getId());
+		if (suma == null)
+			suma = 0.0;
+		result.setAmount(suma);
 		result.setCurrency("EUR");
 		return result;
 	}

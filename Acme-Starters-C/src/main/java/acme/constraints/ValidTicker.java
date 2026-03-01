@@ -22,7 +22,7 @@ import javax.validation.constraints.Pattern;
 
 public @interface ValidTicker {
 
-	String message() default "{acme.validation.starter.ticker.message}";
+	String message() default "{acme.validation.ticker.message}";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};
