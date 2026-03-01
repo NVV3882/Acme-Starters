@@ -7,6 +7,8 @@ import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.validation.Mandatory;
+import acme.constraints.ValidHeader;
+import acme.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,12 +20,12 @@ public class Sponsor extends AbstractRole {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	//@ValidText
+	@ValidText
 	@Column
 	private String				address;
 
 	@Mandatory
-	//@ValidHeader
+	@ValidHeader
 	@Column
 	private String				im;
 
