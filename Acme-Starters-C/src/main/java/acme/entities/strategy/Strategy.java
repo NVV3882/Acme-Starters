@@ -7,10 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 import javax.validation.Valid;
-
-import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
@@ -70,22 +67,24 @@ public class Strategy extends AbstractEntity {
 	private Boolean				draftMode;
 
 	// Derived attributes -----------------------------------------------------
-
-	@Transient
-	@Autowired
-	private StrategyRepository	repository;
-
-
-	@Transient
-	public Double monthsActive() {
-		return 0.0;
-
-	}
-
-	@Transient
-	public Double getExpectedPercentaje() {
-		Integer result = this.repository.getExpectedPercentaje();
-		return result;
-	}
+	/*
+	 * @Transient
+	 * 
+	 * @Autowired
+	 * private StrategyRepository repository;
+	 * 
+	 * 
+	 * @Transient
+	 * public Double monthsActive() {
+	 * return 0.0;
+	 * 
+	 * }
+	 * 
+	 * @Transient
+	 * public Integer getExpectedPercentaje() {
+	 * Integer result = this.repository.getExpectedPercentaje();
+	 * return result;
+	 * }
+	 */
 
 }

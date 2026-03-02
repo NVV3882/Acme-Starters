@@ -1,8 +1,8 @@
 # validation-en.i18n
 
-acme.validation.header.message = Must have between 1 and 75 characters
-acme.validation.text.message = Must have between 1 and 255 characters
-acme.validation.ticker.message = The reference must follow this pattern: XX00-AAAAA (two uppercase letters, two digits, a hyphen, and 5 to 10 alphanumeric characters)
+acme.validation.header.message = Header must have between 1 and 75 characters
+acme.validation.text.message = Text must have between 1 and 255 characters
+acme.validation.ticker.message = The ticker must follow this pattern: XX00-AAAAA (two uppercase letters, two digits, a hyphen, and 5 to 10 alphanumeric characters)
 
 acme.validation.sponsorship.duplicated-ticker.message = Reference already in use
 acme.validation.sponsorship.publicado-sin-donaciones.message = A sponsorship cannot be published without at least one donation

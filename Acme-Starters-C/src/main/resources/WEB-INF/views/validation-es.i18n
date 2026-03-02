@@ -1,8 +1,8 @@
 # validation-es.i18n
 
-acme.validation.header.message  	= Debe tener entre 1 y 75 caracteres
-acme.validation.text.message   		= Debe tener entre 1 y 255 caracteres
-acme.validation.ticker.message	    = La referencia debería seguir el siguiente patrón: XX00-AAAAA (dos letras mayúsculas, dos dígitos, un guion y entre 5 y 10 caracteres alfanuméricos)
+acme.validation.header.message  	= La cabecera debe tener entre 1 y 75 caracteres
+acme.validation.text.message   		= El texto debe tener entre 1 y 255 caracteres
+acme.validation.ticker.message	    = El codigo identificador debería seguir el siguiente patrón: XX00-AAAAA (dos letras mayúsculas, dos dígitos, un guion y entre 5 y 10 caracteres alfanuméricos)
 
 
 acme.validation.sponsorship.duplicated-ticker.message  = Referencia ya usada
