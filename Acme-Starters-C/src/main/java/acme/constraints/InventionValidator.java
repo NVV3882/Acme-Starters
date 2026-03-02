@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.invention.Invention;
 import acme.entities.invention.InventionRepository;
 
@@ -34,24 +35,42 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 		else {
 
 			{
-				boolean uniqueInvention;
+				Boolean uniqueInvention;
 				Invention existingInvention;
 
 				existingInvention = this.repositorio.findInventionByTicker(invention.getTicker());
 				uniqueInvention = existingInvention == null || existingInvention.equals(invention);
 
-				super.state(context, uniqueInvention, "ticker", "acme.validation.Invention.duplicated-ticker.message");
+				super.state(context, uniqueInvention, "ticker", "acme.validation.invention.duplicated-ticker.message");
 			}
 			{
-				boolean correctInvention = false;
-				Integer inventionId = invention.getId();
+				boolean correctParts = true;
 
-				Integer p = this.repositorio.findPartByInventionId(inventionId);
+				Integer numberOfParts = this.repositorio.findNumberOfPartsOfAInventionByInventionId(invention.getId());
 
-				if (p > 0)
-					correctInvention = true;
+				if (invention.getDraftMode() == Boolean.FALSE && numberOfParts == 0)
+					correctParts = false;
 
-				super.state(context, correctInvention, "*", "acme.validation.sponsorship.donacionesCorrectas.message");
+				super.state(context, correctParts, "*", "acme.validation.invention.published-without-parts.message");
+			}
+			{
+				boolean correctDates = false;
+
+				if (MomentHelper.isBefore(invention.getStartMoment(), invention.getEndMoment()) && MomentHelper.getBaseMoment().before(invention.getStartMoment())) // 
+					correctDates = true;
+
+				super.state(context, correctDates, "*", "acme.validation.invention.incorrect-dates-intervale.message");
+			}
+			{
+				boolean correctCost = false;
+
+				Integer numeroPartesInvencion = this.repositorio.findNumberOfPartsOfAInventionByInventionId(invention.getId());
+				Integer numPartesInvencionEnEuros = this.repositorio.numberOfPartsOfAInventionWithCostInEurosByInventionId(invention.getId());
+
+				if (numeroPartesInvencion == numPartesInvencionEnEuros)
+					correctCost = true;
+
+				super.state(context, correctCost, "*", "acme.validation.invention.currency.message");
 			}
 
 			result = !super.hasErrors(context);

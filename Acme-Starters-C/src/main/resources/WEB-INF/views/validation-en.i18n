@@ -9,3 +9,9 @@ acme.validation.sponsorship.publicado-sin-donaciones.message = A sponsorship can
 acme.validation.sponsorship.intervalo-correcto-tiempo.message = The sponsorship start and end moments must define a valid future time interval
 acme.validation.sponsorship.suma-donaciones-correctas.message = The total sponsorship amount must match the sum of its donations
 acme.validation.sponsorship.son-donaciones-en-euros.message = All donations of a sponsorship must be in euros
+
+
+acme.validation.Invention.duplicated-ticker.message  = The ticker is already in use
+acme.validation.invention.published-without-parts.message = The Invention must have 1 part minimum
+acme.validation.invention.incorrect-dates-intervale.message = The startMoment of a Invention must be before the endMoment
+acme.validation.invention.currency.message = The application only accept money with the currency Euros
