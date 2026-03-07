@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
-import acme.client.helpers.MomentHelper;
 import acme.entities.sponsorships.Sponsorship;
 import acme.entities.sponsorships.SponsorshipRepository;
 
@@ -57,20 +56,13 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 				boolean intervaloCorrectoTiempo;
 				Date fechaInicio = patrocinio.getStartMoment();
 				Date fechaFinal = patrocinio.getEndMoment();
-				intervaloCorrectoTiempo = fechaFinal.after(fechaInicio) && MomentHelper.getBaseMoment().before(fechaInicio);
+				if (patrocinio.getDraftMode().equals(false))
+					intervaloCorrectoTiempo = fechaFinal.after(fechaInicio);
+				else
+					intervaloCorrectoTiempo = true;
 				super.state(context, intervaloCorrectoTiempo, "*", "acme.validation.sponsorship.intervalo-correcto-tiempo.message");
 			}
-			{
-				boolean sumaDonacionesCorrectas;
 
-				Double sumaReal = this.repositorio.sumDonationsOfSponsorship(patrocinio.getId());
-				if (sumaReal == null)
-					sumaReal = 0.0;
-				Double sumaMemoria = patrocinio.totalMoney().getAmount();
-				sumaDonacionesCorrectas = sumaReal.equals(sumaMemoria);
-
-				super.state(context, sumaDonacionesCorrectas, "*", "acme.validation.sponsorship.suma-donaciones-correctas.message");
-			}
 			{
 				boolean sonDonacionesEnEuros;
 

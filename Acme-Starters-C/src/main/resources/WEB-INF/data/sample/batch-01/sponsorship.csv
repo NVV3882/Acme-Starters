@@ -32,14 +32,14 @@ sponsorship-23,AA19-TICKER,"Lorem ipsum dolor sit amet, consectetu",<script>aler
 sponsorship-24,AA20-TICKER,"Lorem ipsum dolor sit amet, consectetu",' or 'A' = 'A,2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,sponsor-01
 # description - no singular values
 # startMoment - standard variations
-sponsorship-25,AA21-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,sponsor-01
-sponsorship-26,AA22-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:01,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,sponsor-01
-sponsorship-27,AA23-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 23:58,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,sponsor-01
-sponsorship-28,AA24-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 23:59,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,sponsor-01
+sponsorship-25,AA21-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2000/01/01 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,sponsor-01
+sponsorship-26,AA22-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2000/01/01 00:01,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,sponsor-01
+sponsorship-27,AA23-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2200/12/31 23:58,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,sponsor-01
+sponsorship-28,AA24-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2200/12/31 23:59,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,sponsor-01
 # startMoment - no singular values
 # endMoment - standard variations
-sponsorship-29,AA25-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/02 00:01,http://lorem.com/ipsum,TRUE,sponsor-01
-sponsorship-30,AA26-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/02 00:02,http://lorem.com/ipsum,TRUE,sponsor-01
+sponsorship-29,AA25-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2000/01/01 00:00,http://lorem.com/ipsum,TRUE,sponsor-01
+sponsorship-30,AA26-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2000/01/01 00:01,http://lorem.com/ipsum,TRUE,sponsor-01
 sponsorship-31,AA27-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2200/12/31 23:58,http://lorem.com/ipsum,TRUE,sponsor-01
 sponsorship-32,AA28-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,sponsor-01
 # endMoment - no singular variations
@@ -66,4 +66,3 @@ sponsorship-49,AA45-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum
 # draft-mode no singular variations
 # sponsor - standard variations
 sponsorship-50,AA46-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,sponsor-02
-

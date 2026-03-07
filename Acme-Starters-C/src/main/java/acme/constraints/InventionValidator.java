@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
-import acme.client.helpers.MomentHelper;
 import acme.entities.invention.Invention;
 import acme.entities.invention.InventionRepository;
 
@@ -54,12 +53,12 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 				super.state(context, correctParts, "*", "acme.validation.invention.published-without-parts.message");
 			}
 			{
-				boolean correctDates = false;
-
-				if (MomentHelper.isBefore(invention.getStartMoment(), invention.getEndMoment()) && MomentHelper.getBaseMoment().before(invention.getStartMoment())) // 
-					correctDates = true;
-
-				super.state(context, correctDates, "*", "acme.validation.invention.incorrect-dates-intervale.message");
+				//				boolean correctDates = false;
+				//
+				//				if (MomentHelper.isBefore(invention.getStartMoment(), invention.getEndMoment()) && MomentHelper.getBaseMoment().before(invention.getStartMoment())) // 
+				//					correctDates = true;
+				//
+				//				super.state(context, correctDates, "*", "acme.validation.invention.incorrect-dates-intervale.message");
 			}
 			{
 				boolean correctCost = false;

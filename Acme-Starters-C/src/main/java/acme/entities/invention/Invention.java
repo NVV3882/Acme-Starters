@@ -85,7 +85,7 @@ public class Invention extends AbstractEntity {
 		return 0.0;
 
 	}
-	//	
+
 	//	@Transient
 	//	public Money cost() {
 	//		Money res = null;
