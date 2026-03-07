@@ -53,20 +53,23 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 				super.state(context, correctParts, "*", "acme.validation.invention.published-without-parts.message");
 			}
 			{
-				//				boolean correctDates = false;
-				//
-				//				if (MomentHelper.isBefore(invention.getStartMoment(), invention.getEndMoment()) && MomentHelper.getBaseMoment().before(invention.getStartMoment())) // 
+				boolean correctDates = false;
+
+				//				if (MomentHelper.getBaseMoment().before(invention.getStartMoment()) && MomentHelper.getBaseMoment().before(invention.getEndMoment()))
 				//					correctDates = true;
-				//
-				//				super.state(context, correctDates, "*", "acme.validation.invention.incorrect-dates-intervale.message");
+
+				if (!invention.getDraftMode())
+					if (MomentHelper.isAfter(invention.getStartMoment(), invention.getEndMoment()))
+						correctDates = false;
+
+				super.state(context, correctDates, "*", "acme.validation.invention.incorrect-dates-intervale.message");
 			}
 			{
 				boolean correctCost = false;
 
-				Integer numeroPartesInvencion = this.repositorio.findNumberOfPartsOfAInventionByInventionId(invention.getId());
-				Integer numPartesInvencionEnEuros = this.repositorio.numberOfPartsOfAInventionWithCostInEurosByInventionId(invention.getId());
+				Integer numeroPartes = this.repositorio.countPartOfAnInventionWithCurrencyNotInEurosByInventionId(invention.getId());
 
-				if (numeroPartesInvencion == numPartesInvencionEnEuros)
+				if (numeroPartes == 0) //ya que todas las partes estarian en Euros
 					correctCost = true;
 
 				super.state(context, correctCost, "*", "acme.validation.invention.currency.message");

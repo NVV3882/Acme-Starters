@@ -11,6 +11,6 @@ acme.validation.sponsorship.son-donaciones-en-euros.message = All donations of a
 
 
 acme.validation.Invention.duplicated-ticker.message  = The ticker is already in use
-acme.validation.invention.published-without-parts.message = The Invention must have 1 part minimum
-acme.validation.invention.incorrect-dates-intervale.message = The startMoment of a Invention must be before the endMoment
+acme.validation.invention.published-without-parts.message = The Invention can not be published unless it has 1 part minimum
+acme.validation.invention.incorrect-dates-intervale.message = The start moment of an invention must be before the end moment if the invention is published. Additionally, the startMoment and endMoment must be after the baseMoment
 acme.validation.invention.currency.message = The application only accept money with the currency Euros

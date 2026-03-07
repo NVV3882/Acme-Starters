@@ -15,10 +15,10 @@ public interface InventionRepository extends AbstractRepository {
 	@Query("select count(p) from Part p where p.invention.id = :id")
 	Integer findNumberOfPartsOfAInventionByInventionId(Integer id);
 
-	@Query("select count(p) from Part p where p.invention.id = :id and p.cost.currency = 'EUR'")
-	Integer numberOfPartsOfAInventionWithCostInEurosByInventionId(Integer id);
+	@Query("select count(p) from Part p where p.invention.id = :id  and p.cost.currency != 'EUR' ")
+	Integer countPartOfAnInventionWithCurrencyNotInEurosByInventionId(Integer id);
 
-	@Query("select sum(p.cost.amount) from Part p where p.invention.id = :id and p.cost.currency = 'EUR' ")
+	@Query("select sum(p.cost.amount) from Part p where p.invention.id = :id")
 	Double sumCostOfThePartsOfAInventionByInventionId(Integer id);
 
 }
