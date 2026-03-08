@@ -8,9 +8,13 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import acme.client.components.basis.AbstractEntity;
+import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
@@ -47,12 +51,12 @@ public class Invention extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
+	@ValidMoment()
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				startMoment;
 
 	@Mandatory
-	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
+	@ValidMoment()
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				endMoment;
 
@@ -66,37 +70,42 @@ public class Invention extends AbstractEntity {
 	@Column
 	private Boolean				draftMode;
 
-	/*
-	 * @Mandatory
-	 * 
-	 * @Valid
-	 * 
-	 * @Transient
-	 * public Double monthsActive() {
-	 * 
-	 * }
-	 */
+	//Atributos derivados
 
-	/*
-	 * @Mandatory
-	 * 
-	 * @ValidMoney(min = 0.1)
-	 * 
-	 * @Transient
-	 * public Money cost() {
-	 * 
-	 * InventionRepository inventionRepo;
-	 * Money dinero;
-	 * dinero.setAmount(inventionRepo.sumCostOfThePartsOfAInvention(this.getId());
-	 * dinero.setCurrency(this.description);
-	 * 
-	 * 
-	 * }
-	 * 
-	 */
+	@Transient
+	@Autowired
+	InventionRepository			inventionRepository;
+
+
+	@Transient
+	public Double monthsActive() {
+		Date fechaini = this.startMoment;
+		Date fechafin = this.endMoment;
+		if (fechaini == null && fechafin == null)
+			return null;
+		return 0.0;
+
+	}
+
+	@Transient
+	public Money cost() {
+		Money res = null;
+		Double dinero = this.inventionRepository.sumCostOfThePartsOfAInventionByInventionId(this.getId());
+		if (dinero == null)
+			res.setAmount(0.0);
+		else
+			res.setAmount(dinero);
+
+		res.setCurrency("EUR");
+
+		return res;
+	}
+
+	//relaciones
+
 
 	@Mandatory
 	@ManyToOne(optional = false)
-	private Inventor			inventor;
+	private Inventor inventor;
 
 }

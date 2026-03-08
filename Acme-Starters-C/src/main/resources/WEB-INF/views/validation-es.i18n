@@ -1,12 +1,17 @@
 # validation-es.i18n
 
-acme.validation.header.message  	= Debe tener entre 1 y 75 caracteres
-acme.validation.text.message   		= Debe tener entre 1 y 255 caracteres
-acme.validation.ticker.message	    = La referencia debería seguir el siguiente patrón: XX00-AAAAA (dos letras mayúsculas, dos dígitos, un guion y entre 5 y 10 caracteres alfanuméricos)
+acme.validation.header.message  	= La cabecera debe tener entre 1 y 75 caracteres
+acme.validation.text.message   		= El texto debe tener entre 1 y 255 caracteres
+acme.validation.ticker.message	    = El codigo identificador debería seguir el siguiente patrón: XX00-AAAAA (dos letras mayúsculas, dos dígitos, un guion y entre 5 y 10 caracteres alfanuméricos)
 
 
 acme.validation.sponsorship.duplicated-ticker.message  = Referencia ya usada
 acme.validation.sponsorship.publicado-sin-donaciones.message = No se puede publicar un sponsorship sin al menos una donación
 acme.validation.sponsorship.intervalo-correcto-tiempo.message = El intervalo del comienzo y el final de un patrocinio se debe encontrar en un momento futuro desde que se publica el patrocinio
-acme.validation.sponsorship.suma-donaciones-correctas.message = El dinero total del patrocinio debe ser igual a la suma de las donaciones del mismo
 acme.validation.sponsorship.son-donaciones-en-euros.message = Las donaciones de un patrocinio deben de ser en euros
+
+
+acme.validation.Invention.duplicated-ticker.message  = El código identificador de la invención ya existe
+acme.validation.invention.published-without-parts.message = Las invenciones no pueden publicarse a menos que contengan al menos una parte
+acme.validation.invention.incorrect-dates-intervale.message = El momento de inicio de una Invención debe haber ocurrido antes del momento final siempre que la invencion esta publicada. Además, las fechas startMoment y endMoment deben ser posteriores al baseMoment.
+acme.validation.invention.currency.message = Solo se acepta dinero en divisa Euro.

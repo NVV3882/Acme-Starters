@@ -13,9 +13,12 @@ public interface InventionRepository extends AbstractRepository {
 	Invention findInventionByTicker(String ticker);
 
 	@Query("select count(p) from Part p where p.invention.id = :id")
-	Integer findPartByInventionId(int id);
+	Integer findNumberOfPartsOfAInventionByInventionId(Integer id);
 
-	@Query("select count(p.cost.amount) from Part p where p.invention.id = :id ")
-	Double sumCostOfThePartsOfAInvention(int id);
+	@Query("select count(p) from Part p where p.invention.id = :id  and p.cost.currency != 'EUR' ")
+	Integer countPartOfAnInventionWithCurrencyNotInEurosByInventionId(Integer id);
+
+	@Query("select sum(p.cost.amount) from Part p where p.invention.id = :id")
+	Double sumCostOfThePartsOfAInventionByInventionId(Integer id);
 
 }
