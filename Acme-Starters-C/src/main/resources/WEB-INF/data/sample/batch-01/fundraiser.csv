@@ -1,0 +1,5 @@
+key,key:userAccount,bank,statement,agent
+#base-entity
+fundraiser-01,user-account-fundraiser-01,Calle Fuertes,codigo-01,true
+fundraiser-02,user-account-fundraiser-02,Calle Acal,codigo-02,true
+fundraiser-03,user-account-fundraiser-03,Calle Leal,codigo-01,false
