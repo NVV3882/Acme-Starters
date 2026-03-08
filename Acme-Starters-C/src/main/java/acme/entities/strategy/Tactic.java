@@ -35,7 +35,7 @@ public class Tactic extends AbstractEntity {
 	private String				notes;
 
 	@Mandatory
-	@ValidNumber(min = 1)
+	@ValidNumber(min = 1, max = 100)
 	@Column
 	private Double				expectedPercentaje;
 
