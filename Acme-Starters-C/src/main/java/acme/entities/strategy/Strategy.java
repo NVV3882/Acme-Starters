@@ -5,6 +5,7 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
@@ -75,19 +76,23 @@ public class Strategy extends AbstractEntity {
 	@Autowired
 	private StrategyRepository	repository;
 
-	/*
-	 * @Transient
-	 * public Double monthsActive() {
-	 * return 0.0;
-	 * 
-	 * }
-	 * 
-	 * @Transient
-	 * public Double getExpectedPercentaje() {
-	 * Integer result = this.repository.getExpectedPercentaje();
-	 * return result;
-	 * }
-	 * 
-	 */
+
+	@Transient
+	public Double monthsActive() {
+		return 0.0;
+
+	}
+
+	@Transient
+	public Double getExpectedPercentaje() {
+		Double result = this.repository.getExpectedPercentaje();
+		return result;
+	}
+
+
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
+	private Fundraiser fundraiser;
 
 }

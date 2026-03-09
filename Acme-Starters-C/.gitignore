@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 /bin/
-=======
 logs/
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -33,4 +31,3 @@ nbdist/
 mvnw
 
 mvnw\.cmd
->>>>>>> main

@@ -1,6 +1,7 @@
 
 package acme.entities.sponsorships;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -19,6 +20,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidSponsorship;
 import acme.constraints.ValidText;
@@ -76,17 +78,16 @@ public class Sponsorship extends AbstractEntity {
 
 
 	@Transient
-	public Double monthsActive() {
+	public Double getMonthsActive() {
 		Date fechaini = this.startMoment;
 		Date fechafin = this.endMoment;
-		if (fechaini == null && fechafin == null)
-			return null;
-		return 0.0;
+		Double res = MomentHelper.computeDifference(fechaini, fechafin, ChronoUnit.MONTHS);
+		return res;
 
 	}
 
 	@Transient
-	public Money totalMoney() {
+	public Money getTotalMoney() {
 		Money result = new Money();
 		Double suma = this.repository.sumDonationsOfSponsorship(this.getId());
 		if (suma == null)
