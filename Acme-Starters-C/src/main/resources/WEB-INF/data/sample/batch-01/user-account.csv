@@ -11,3 +11,7 @@ user-account-sponsor-03,true,"UserIdentity{name: 'Cristina', surname: 'Sponsor',
 user-account-fundraiser-01,true,"UserIdentity{name: 'Carlos', surname: 'Fundraiser', email: 'carlosfundraiser@acme.com'}",fundraiser1,fundraiser1
 user-account-fundraiser-02,true,"UserIdentity{name: 'Laura', surname: 'Fundraiser', email: 'laurafundraiser@acme.com'}",fundraiser2,fundraiser2
 user-account-fundraiser-03,true,"UserIdentity{name: 'Andrea', surname: 'Fundraiser', email: 'andreafundraiser@acme.com'}",fundraiser3,fundraiser3
+user-account-inventor-01,true,"UserIdentity{name: 'Ignacio', surname: 'Fuertes', email: 'igfuemon@acme.com'}",inventor1,inventor1
+user-account-inventor-02,true,"UserIdentity{name: 'Leonardo', surname: 'Da Vinci', email: 'leonardito@acme.com'}",inventor2,inventor2
+user-account-inventor-03,true,"UserIdentity{name: 'Isaac', surname: 'Newton', email: 'issaacnewton@acme.com'}",inventor3,inventor3
+
