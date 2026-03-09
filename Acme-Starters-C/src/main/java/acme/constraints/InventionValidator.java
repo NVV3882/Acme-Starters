@@ -54,12 +54,12 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 				super.state(context, correctParts, "*", "acme.validation.invention.published-without-parts.message");
 			}
 			{
-				boolean correctDates = false;
+				boolean correctDates = true;
 
 				//				if (MomentHelper.getBaseMoment().before(invention.getStartMoment()) && MomentHelper.getBaseMoment().before(invention.getEndMoment()))
 				//					correctDates = true;
 
-				if (!invention.getDraftMode())
+				if (invention.getDraftMode().equals(false))
 					if (MomentHelper.isAfter(invention.getStartMoment(), invention.getEndMoment()))
 						correctDates = false;
 
