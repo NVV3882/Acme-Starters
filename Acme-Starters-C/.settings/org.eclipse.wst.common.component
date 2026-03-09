@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                    
+    
     
     
     
@@ -83,14 +84,10 @@
     
     
     <wb-module deploy-name="Acme-Starters-C">
-<<<<<<< HEAD
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-=======
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
         
         
-        
->>>>>>> main
+
         
         
         
@@ -170,14 +167,12 @@
         
         
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-<<<<<<< HEAD
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-=======
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
         
         
-        
->>>>>>> main
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+  
         
         
         
@@ -257,15 +252,13 @@
         
         
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-<<<<<<< HEAD
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-=======
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
         
         
+
         
->>>>>>> main
-        
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
         
         
         
@@ -331,16 +324,14 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-<<<<<<< HEAD
-                                                                                                                                                                                                                                                                
-=======
                                                                                                                                                                                                                                                                                         
         
         
+
         
->>>>>>> main
         
-        
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+                                                                                                                                                                                                                                                                                                
         
         
         
@@ -370,51 +361,27 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-<<<<<<< HEAD
-                                                                        
-=======
                                                                                                 
         
         
-        
->>>>>>> main
-        
+
         
         
         
-        
-        
-        
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
-<<<<<<< HEAD
-                
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/acme-framework"/>
-                                
-        
-        
-        <dependent-module archiveName="Acme-Framework-26.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Acme-Framework-26.2.0/Acme-Framework-26.2.0">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
                                                 
-            
-            
-            <dependency-type>uses</dependency-type>
-                                            
         
         
-        </dependent-module>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
         
-=======
+        
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/acme-framework"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-test-sources/test-annotations"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
                                         
         
         
         
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/acme-framework"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-        
-        
-        
-        
->>>>>>> main
+
         
         
         
@@ -493,23 +460,16 @@
         
         
         <property name="java-output-path" value="/Hello-World-22.0/target/classes"/>
-<<<<<<< HEAD
-                        
-        
-        <property name="context-root" value="Acme-Starters"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-=======
                                                 
         
         
         
         
         <property name="context-root" value="Acme-Starters"/>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
     
     
-    
->>>>>>> main
+
     
     
     
@@ -590,14 +550,9 @@
     
     
     </wb-module>
-<<<<<<< HEAD
-                                                                                                                                                                                                                                                                                                                                
-=======
                                                                                                                                                                                                                                                                                                                                             
 
 
-
->>>>>>> main
 
 
 
