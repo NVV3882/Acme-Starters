@@ -73,7 +73,6 @@ public class Invention extends AbstractEntity {
 	private Boolean				draftMode;
 
 	//Atributos derivados
-
 	@Transient
 	@Autowired
 	InventionRepository			inventionRepository;
@@ -82,18 +81,18 @@ public class Invention extends AbstractEntity {
 	@Mandatory
 	//@Valid
 	@Transient
-	public Double monthsActive() {
+	public Double getMonthsActive() {
 		Date fechaini = this.startMoment;
 		Date fechafin = this.endMoment;
-		return MomentHelper.computeDifference(fechaini, fechafin, ChronoUnit.MONTHS);
-
+		Double res = MomentHelper.computeDifference(fechaini, fechafin, ChronoUnit.MONTHS);
+		return res;
 	}
 
 	@Mandatory
 	//@ValidMoney()
 	@Transient
-	public Money cost() {
-		Money res = null;
+	public Money getCost() {
+		Money res = new Money();
 		Double dinero = this.inventionRepository.sumCostOfThePartsOfAInventionByInventionId(this.getId());
 		if (dinero == null)
 			res.setAmount(0.0);
