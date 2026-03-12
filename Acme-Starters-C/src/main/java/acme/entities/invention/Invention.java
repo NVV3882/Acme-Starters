@@ -20,6 +20,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MathHelper;
 import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidInvention;
@@ -82,10 +83,13 @@ public class Invention extends AbstractEntity {
 	//@Valid
 	@Transient
 	public Double getMonthsActive() {
-		Date fechaini = this.startMoment;
-		Date fechafin = this.endMoment;
-		Double res = MomentHelper.computeDifference(fechaini, fechafin, ChronoUnit.MONTHS);
-		return res;
+		Date fechaIni = this.startMoment;
+		Date fechaFin = this.endMoment;
+		if (fechaIni != null && fechaFin != null) {
+			Double res = MomentHelper.computeDifference(fechaIni, fechaFin, ChronoUnit.MONTHS);
+			return MathHelper.roundOff(res, 88); //da igual que ponga 88 o 36, siempre redondea a 2 decimales.
+		} else
+			return 0.0;
 	}
 
 	@Mandatory
