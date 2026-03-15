@@ -13,6 +13,7 @@
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.sponsorships = Patrocinios
+master.menu.anonymous.strategies = Estrategias
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
