@@ -1,6 +1,7 @@
 
 package acme.constraints;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.validation.ConstraintValidatorContext;
@@ -54,9 +55,8 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 				boolean intervaloCorrectoTiempo;
 				Date fechaInicio = value.getStartMoment();
 				Date fechaFinal = value.getEndMoment();
-
 				if (value.getDraftMode().equals(false))
-					intervaloCorrectoTiempo = MomentHelper.isAfter(fechaFinal, fechaInicio);
+					intervaloCorrectoTiempo = MomentHelper.computeDifference(fechaInicio, fechaFinal, ChronoUnit.DAYS) >= 1;
 				else
 					intervaloCorrectoTiempo = true;
 				super.state(context, intervaloCorrectoTiempo, "*", "acme.validation.strategy.intervalo-correcto-tiempo.message");
