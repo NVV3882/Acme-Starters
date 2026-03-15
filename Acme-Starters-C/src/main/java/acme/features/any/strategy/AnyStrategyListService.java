@@ -21,7 +21,7 @@ public class AnyStrategyListService extends AbstractService<Any, Strategy> {
 
 	@Override
 	public void load() {
-		this.strategy = this.repository.findAllStrategies();
+		this.strategy = this.repository.listAllStrategies();
 	}
 
 	@Override
@@ -31,7 +31,7 @@ public class AnyStrategyListService extends AbstractService<Any, Strategy> {
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		super.unbindObjects(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "monthsActive", "expectedPercentage");
 	}
 
 }

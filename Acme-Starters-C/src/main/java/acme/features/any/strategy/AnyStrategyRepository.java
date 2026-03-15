@@ -12,10 +12,13 @@ import acme.entities.strategy.Strategy;
 @Repository
 public interface AnyStrategyRepository extends AbstractRepository {
 
-	@Query("SELECT s FROM Strategy s WHERE s.id = :id")
-	Strategy findStrategyById(int id);
+	@Query("select s from Strategy s where s.draftMode = false")
+	Collection<Strategy> listAllStrategies();
 
-	@Query("SELECT s FROM Strategy s")
-	Collection<Strategy> findAllStrategies();
+	@Query("select s from Strategy s where s.id=:id")
+	Strategy showStrategy(int id);
+
+	@Query("select count(s) > 0 from Strategy s where s.id=:id and s.draftMode = false")
+	Boolean strategyIsPublished(int id);
 
 }
