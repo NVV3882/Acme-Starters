@@ -37,7 +37,7 @@ public class Tactic extends AbstractEntity {
 	@Mandatory
 	@ValidScore
 	@Column
-	private Double				expectedPercentaje;
+	private Double				expectedPercentage;
 
 	@Mandatory
 	@Valid

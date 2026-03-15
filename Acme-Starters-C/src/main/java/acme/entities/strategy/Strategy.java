@@ -96,9 +96,10 @@ public class Strategy extends AbstractEntity {
 
 	@ValidScore
 	@Transient
-	public Double getExpectedPercentaje() {
-		Double result = this.repository.getExpectedPercentaje(this.getId());
-		Double res = result == null ? 0 : result.doubleValue();
+	public Double getExpectedPercentage() {
+		Double percentage = this.repository.getExpectedPercentage(this.getId());
+		Double result = percentage == null ? 0 : percentage.doubleValue();
+		Double res = MathHelper.roundOff(result, 1);
 		return res;
 	}
 

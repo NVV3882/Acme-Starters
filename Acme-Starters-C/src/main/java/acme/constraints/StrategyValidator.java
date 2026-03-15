@@ -27,35 +27,35 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 	}
 
 	@Override
-	public boolean isValid(final Strategy value, final ConstraintValidatorContext context) {
+	public boolean isValid(final Strategy strategy, final ConstraintValidatorContext context) {
 		assert context != null;
 		boolean result;
-		if (value == null)
+		if (strategy == null)
 			result = true;
 		else {
 			{
 				boolean strategyUnico;
 				Strategy strategyExistente;
 
-				strategyExistente = this.repository.findStrategyByTicker(value.getTicker());
-				strategyUnico = strategyExistente == null || strategyExistente.equals(value);
+				strategyExistente = this.repository.findStrategyByTicker(strategy.getTicker());
+				strategyUnico = strategyExistente == null || strategyExistente.equals(strategy);
 
 				super.state(context, strategyUnico, "ticker", "acme.validation.strategy.duplicated-ticker.message");
 			}
 			{
 				boolean tactics;
 				boolean tieneTactics = false;
-				if (this.repository.sumTacticsOfStrategy(value.getId()) != null)
+				if (this.repository.sumTacticsOfStrategy(strategy.getId()) != null)
 					tieneTactics = true;
-				tactics = value.getDraftMode() || tieneTactics;
+				tactics = Boolean.TRUE.equals(strategy.getDraftMode()) || tieneTactics;
 
 				super.state(context, tactics, "*", "acme.validation.strategy.publicado-sin-tactics.message");
 			}
 			{
 				boolean intervaloCorrectoTiempo;
-				Date fechaInicio = value.getStartMoment();
-				Date fechaFinal = value.getEndMoment();
-				if (value.getDraftMode().equals(false))
+				Date fechaInicio = strategy.getStartMoment();
+				Date fechaFinal = strategy.getEndMoment();
+				if (Boolean.FALSE.equals(strategy.getDraftMode()))
 					intervaloCorrectoTiempo = MomentHelper.computeDifference(fechaInicio, fechaFinal, ChronoUnit.DAYS) >= 1;
 				else
 					intervaloCorrectoTiempo = true;

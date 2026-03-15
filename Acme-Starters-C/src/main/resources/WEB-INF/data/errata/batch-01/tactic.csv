@@ -1,4 +1,4 @@
-key,name,notes,expectedPercentaje,kind,key:strategy
+key,name,notes,expectedPercentage,kind,key:strategy
 # base entity
 tactic-00,,,,,
 # name
@@ -10,5 +10,3 @@ tactic-04,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, 
 # expected percentage
 tactic-05,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",0.00,SUBTLE,strategy-00
 tactic-06,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",101.00,SUBTLE,strategy-00
-# kind
-tactic-07,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.00,INVALID_TYPE,strategy-00
