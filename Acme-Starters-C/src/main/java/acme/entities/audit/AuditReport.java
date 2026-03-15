@@ -19,6 +19,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MathHelper;
 import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidAuditReport;
 import acme.constraints.ValidHeader;
@@ -85,7 +86,10 @@ public class AuditReport extends AbstractEntity {
 	public Double getMonthsActive() {
 		Date fechaStart = this.startMoment;
 		Date fechaEnd = this.endMoment;
+		if (fechaStart == null || fechaEnd == null)
+			return 0.0;
 		Double res = MomentHelper.computeDifference(fechaStart, fechaEnd, ChronoUnit.MONTHS);
+		MathHelper.roundOff(res, 1);
 		return res;
 
 	}
