@@ -17,4 +17,6 @@ user-account-fundraiser-03,true,"UserIdentity{name: 'Andrea', surname: 'Fundrais
 user-account-inventor-01,true,"UserIdentity{name: 'Ignacio', surname: 'Fuertes', email: 'igfuemon@acme.com'}",inventor1,inventor1
 user-account-inventor-02,true,"UserIdentity{name: 'Leonardo', surname: 'Da Vinci', email: 'leonardito@acme.com'}",inventor2,inventor2
 user-account-inventor-03,true,"UserIdentity{name: 'Isaac', surname: 'Newton', email: 'issaacnewton@acme.com'}",inventor3,inventor3
-
+user-account-spokesperson-01,true,"UserIdentity{name: 'Juan', surname: 'spokesperson', email: 'juanspokesperson@acme.com'}",spokesperson1,spokesperson1
+user-account-spokesperson-02,true,"UserIdentity{name: 'David', surname: 'spokesperson', email: 'davidspokesperson@acme.com'}",spokesperson2,spokesperson2
+user-account-spokesperson-03,true,"UserIdentity{name: 'Cristina', surname: 'spokesperson', email: 'cristinaspokesperson@acme.com'}",spokesperson3,spokesperson3

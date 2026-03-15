@@ -20,11 +20,13 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MathHelper;
 import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidSponsorship;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
+import acme.realms.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -81,9 +83,11 @@ public class Sponsorship extends AbstractEntity {
 	public Double getMonthsActive() {
 		Date fechaini = this.startMoment;
 		Date fechafin = this.endMoment;
+		if (fechaini == null || fechafin == null)
+			return 0.0;
 		Double res = MomentHelper.computeDifference(fechaini, fechafin, ChronoUnit.MONTHS);
+		MathHelper.roundOff(res, 1);
 		return res;
-
 	}
 
 	@Transient

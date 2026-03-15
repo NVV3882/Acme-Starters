@@ -9,6 +9,7 @@ any.sponsorship.list.label.endMoment = Fecha de fin
 any.sponsorship.list.label.monthsActive = Meses activo
 any.sponsorship.list.label.totalMoney = Dinero total
 
+
 any.sponsorship.form.title = Detalles del patrocinio
 
 any.sponsorship.form.label.ticker = Ticker:
@@ -20,3 +21,4 @@ any.sponsorship.form.label.moreInfo = Más información:
 any.sponsorship.form.label.monthsActive = Meses activo:
 any.sponsorship.form.label.totalMoney = Dinero total:
 any.sponsorship.form.button.donations = Donaciones
+any.sponsorship.form.button.sponsor = Patrocinador

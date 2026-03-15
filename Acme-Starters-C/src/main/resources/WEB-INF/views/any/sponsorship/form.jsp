@@ -14,4 +14,5 @@
 	<acme:form-money code="any.sponsorship.form.label.totalMoney" path="totalMoney"/>
 	
 	<acme:button code="any.sponsorship.form.button.donations" action="/any/donation/list?sponsorshipId=${id}"/>
+	<acme:button code="any.sponsorship.form.button.sponsor" action="/any/sponsor/show?sponsorshipId=${id}"/>	
 </acme:form>

@@ -26,7 +26,13 @@ public class AnyDonationListService extends AbstractService<Any, Donation> {
 	}
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		Boolean res;
+		int sponsorshipId = super.getRequest().getData("sponsorshipId", int.class);
+		if (this.repositorio.sponsorshipIsPublished(sponsorshipId).equals(true))
+			res = true;
+		else
+			res = false;
+		super.setAuthorised(res);
 	}
 
 	@Override
