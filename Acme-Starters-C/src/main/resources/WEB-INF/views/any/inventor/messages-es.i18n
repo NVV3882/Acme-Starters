@@ -1,0 +1,7 @@
+# messages-es.i18n
+
+any.inventor.form.title = Detalles de un inventor
+
+any.inventor.form.label.bio = Bio:
+any.inventor.form.label.keyWords = Palabras Clave:
+any.inventor.form.label.licensed = Licenciado:
