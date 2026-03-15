@@ -1,6 +1,7 @@
 
 package acme.entities.audit;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -18,6 +19,8 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MathHelper;
+import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidAuditReport;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
@@ -53,12 +56,12 @@ public class AuditReport extends AbstractEntity {
 	private String					description;
 
 	@Mandatory
-	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
+	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date					startMoment;
 
 	@Mandatory
-	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
+	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date					endMoment;
 
@@ -76,14 +79,20 @@ public class AuditReport extends AbstractEntity {
 
 	@Transient
 	@Autowired
-	private AuditSectionRepository	repository;
+	private AuditReportRepository	repository;
 
-	//	@Transient
-	//	public Double monthsActive() {
-	//		Date fecha = this.startMoment;
-	//
-	//	}
 
+	@Transient
+	public Double getMonthsActive() {
+		Date fechaStart = this.startMoment;
+		Date fechaEnd = this.endMoment;
+		if (fechaStart == null || fechaEnd == null)
+			return 0.0;
+		Double res = MomentHelper.computeDifference(fechaStart, fechaEnd, ChronoUnit.MONTHS);
+		MathHelper.roundOff(res, 1);
+		return res;
+
+	}
 
 	@Transient
 	public Integer getHours() {

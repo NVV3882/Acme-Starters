@@ -1,0 +1,15 @@
+# messages-en.i18n
+
+any.part.list.title = Listing of parts of a Invention
+
+any.part.list.label.name = Name
+any.part.list.label.cost = Cost
+any.part.list.label.kind = Kind
+
+
+any.part.form.title = part details
+
+any.part.form.label.name = Name:
+any.part.form.label.description = Description:
+any.part.form.label.cost = Cost:
+any.part.form.label.kind = Kind:

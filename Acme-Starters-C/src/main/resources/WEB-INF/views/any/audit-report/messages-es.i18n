@@ -1,0 +1,24 @@
+# messages-es.i18n
+
+any.auditReport.list.title = Lista de reportes de auditoría publicados
+
+any.auditReport.list.label.ticker = Ticker
+any.auditReport.list.label.name = Nombre
+any.auditReport.list.label.startMoment = Fecha de inicio
+any.auditReport.list.label.endMoment = Fecha de fin
+any.auditReport.list.label.monthsActive = Meses activo
+any.auditReport.list.label.hours = Horas totales
+
+any.auditReport.form.title = Detalles del reporte de auditoría
+
+any.auditReport.form.label.ticker = Ticker:
+any.auditReport.form.label.name = Nombre:
+any.auditReport.form.label.description = Descripción:
+any.auditReport.form.label.startMoment = Fecha de inicio:
+any.auditReport.form.label.endMoment = Fecha de fin:
+any.auditReport.form.label.moreInfo = Más información:
+any.auditReport.form.label.monthsActive = Meses activo:
+any.auditReport.form.label.hours = Horas totales:
+
+any.auditReport.form.button.auditSections = Secciones de auditoría
+any.auditReport.form.button.auditor = Auditor

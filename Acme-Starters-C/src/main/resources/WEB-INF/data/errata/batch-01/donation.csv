@@ -10,11 +10,10 @@ donation-03,"Lorem ipsum dolor sit amet, consectetu","",EUR 500.00,ALTRUIST,spon
 donation-04,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",EUR 500.00,ALTRUIST,sponsorship-00
 # notes - no singular values
 # money - standard variations
-donation-05,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",0.00,ALTRUIST,sponsorship-00
-donation-06,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",1000000.01,ALTRUIST,sponsorship-00
+donation-05,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 0.00,ALTRUIST,sponsorship-00
+donation-06,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 1000000.01,ALTRUIST,sponsorship-00
 # money - no singular values
 # kind - standard variations
-donation-07,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500.00,INVALID_TYPE,sponsorship-00
 # kind - no singular values
 # sponsorship - standard variations
 # sponsorship - no singular values

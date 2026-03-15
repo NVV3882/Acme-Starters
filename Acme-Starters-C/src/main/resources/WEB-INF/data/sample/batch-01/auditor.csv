@@ -1,0 +1,4 @@
+key,key:userAccount,firm,highlights,solicitor
+auditor-01,user-account-auditor-01,"Terra Nets, S.A.","Lo",TRUE
+auditor-02,user-account-auditor-02,"Лорем ипсум","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tem",TRUE
+auditor-03,user-account-auditor-03,"देवनागरी","Lorem ipsum dolor sit amet",FALSE

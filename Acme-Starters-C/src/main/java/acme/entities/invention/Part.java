@@ -43,6 +43,7 @@ public class Part extends AbstractEntity {
 	private PartKind			kind;
 
 	@Mandatory
+	@Valid
 	@ManyToOne(optional = false)
 	private Invention			invention;
 

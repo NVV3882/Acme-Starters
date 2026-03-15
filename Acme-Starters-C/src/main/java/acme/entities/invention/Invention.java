@@ -20,6 +20,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MathHelper;
 import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidInvention;
@@ -73,7 +74,6 @@ public class Invention extends AbstractEntity {
 	private Boolean				draftMode;
 
 	//Atributos derivados
-
 	@Transient
 	@Autowired
 	InventionRepository			inventionRepository;
@@ -82,18 +82,21 @@ public class Invention extends AbstractEntity {
 	@Mandatory
 	//@Valid
 	@Transient
-	public Double monthsActive() {
-		Date fechaini = this.startMoment;
-		Date fechafin = this.endMoment;
-		return MomentHelper.computeDifference(fechaini, fechafin, ChronoUnit.MONTHS);
-
+	public Double getMonthsActive() {
+		Date fechaIni = this.startMoment;
+		Date fechaFin = this.endMoment;
+		if (fechaIni != null && fechaFin != null) {
+			Double res = MomentHelper.computeDifference(fechaIni, fechaFin, ChronoUnit.MONTHS);
+			return MathHelper.roundOff(res, 88); //da igual que ponga 88 o 36, siempre redondea a 2 decimales.
+		} else
+			return 0.0;
 	}
 
 	@Mandatory
 	//@ValidMoney()
 	@Transient
-	public Money cost() {
-		Money res = null;
+	public Money getCost() {
+		Money res = new Money();
 		Double dinero = this.inventionRepository.sumCostOfThePartsOfAInventionByInventionId(this.getId());
 		if (dinero == null)
 			res.setAmount(0.0);
