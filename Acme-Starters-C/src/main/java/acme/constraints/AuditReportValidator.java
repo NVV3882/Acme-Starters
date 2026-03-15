@@ -9,7 +9,6 @@ import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.entities.audit.AuditReport;
 import acme.entities.audit.AuditReportRepository;
-import acme.entities.audit.AuditSection;
 
 @Validator
 public class AuditReportValidator extends AbstractValidator<ValidAuditReport, AuditReport> {
@@ -43,11 +42,8 @@ public class AuditReportValidator extends AbstractValidator<ValidAuditReport, Au
 			}
 			{
 				boolean auditSectionsCorrectos;
-				java.util.List<AuditSection> auditSections;
 
-				auditSections = this.repositorio.findAuditSectionsByAuditReportId(audit.getId());
-				auditSectionsCorrectos = auditSections != null && !auditSections.isEmpty();
-
+				auditSectionsCorrectos = this.repositorio.computeHours(audit.getId()) != null || audit.getDraftMode();
 				super.state(context, auditSectionsCorrectos, "*", "acme.validation.audit.correct-audit-sections.message");
 			}
 			result = !super.hasErrors(context);

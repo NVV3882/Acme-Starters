@@ -1,0 +1,10 @@
+@messages-en.i18n
+
+authenticated.sponsor.form.title = Sponsor form
+
+authenticated.sponsor.form.label.address = Address:
+authenticated.sponsor.form.label.gold = Gold:
+authenticated.sponsor.form.label.im = Image:
+
+authenticated.sponsor.form.button.create = Register
+authenticated.sponsor.form.button.update = Update

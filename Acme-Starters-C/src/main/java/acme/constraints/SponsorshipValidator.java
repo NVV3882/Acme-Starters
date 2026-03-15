@@ -1,6 +1,7 @@
 
 package acme.constraints;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.validation.ConstraintValidatorContext;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.sponsorships.Sponsorship;
 import acme.entities.sponsorships.SponsorshipRepository;
 
@@ -57,7 +59,7 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 				Date fechaInicio = patrocinio.getStartMoment();
 				Date fechaFinal = patrocinio.getEndMoment();
 				if (patrocinio.getDraftMode().equals(false))
-					intervaloCorrectoTiempo = fechaFinal.after(fechaInicio);
+					intervaloCorrectoTiempo = MomentHelper.computeDifference(fechaInicio, fechaFinal, ChronoUnit.DAYS) >= 1;
 				else
 					intervaloCorrectoTiempo = true;
 				super.state(context, intervaloCorrectoTiempo, "*", "acme.validation.sponsorship.intervalo-correcto-tiempo.message");
