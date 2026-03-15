@@ -1,0 +1,19 @@
+key,name,notes,hours,kind,key:report
+# base entity
+audit-section-00,,,,,
+# name - standard variations
+audit-section-01,"","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50,PRELIMINARY,audit-report-00
+audit-section-02,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50,PRELIMINARY,audit-report-00
+# name - no singular values
+# notes - standard variations
+audit-section-03,"Lorem ipsum dolor sit amet, consectetu","",50,PRELIMINARY,audit-report-01
+audit-section-04,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",50,PRELIMINARY,audit-report-00
+# notes - no singular values
+# hours - standard variations
+audit-section-05,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",0,PRELIMINARY,audit-report-00
+audit-section-06,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",10001,PRELIMINARY,audit-report-00
+# hours - no singular values,"","",""
+# kind - standard variations
+# kind - no singular values
+# audit-report - standard variations
+# audit-report - no singular values
