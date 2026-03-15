@@ -8,28 +8,28 @@ invention-03,QL84-ticKer099,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsu
 invention-04,WW46-TICKE2,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
 # ticker - no singular values
 # name - standard variations
-invention-05,AA01-TICKER,"L","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-06,AA02-TICKER,"Lo","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-05,AA01-TICKER,L,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-06,AA02-TICKER,Lo,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
 invention-07,AA03-TICKER,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
 invention-08,AA04-TICKER,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-09,AA05-TICKER,"โลเร็ม อิปซัม","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-10,AA06-TICKER,"لوريم إيبسوم","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-11,AA07-TICKER,"洛伦·伊普森","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-12,AA08-TICKER,"<marquee>Hacked</marquee>","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-13,AA09-TICKER,"<script>alert(‘Hacked!’);</script>","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-14,AA10-TICKER,"' or 'A' = 'A","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-09,AA05-TICKER,โลเร็ม อิปซัม,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-10,AA06-TICKER,لوريم إيبسوم,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-11,AA07-TICKER,洛伦·伊普森,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-12,AA08-TICKER,<marquee>Hacked</marquee>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-13,AA09-TICKER,<script>alert(‘Hacked!’);</script>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-14,AA10-TICKER,' or 'A' = 'A,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
 # name - no singular values
 # description - standard variations
-invention-15,AA11-TICKER,"Lorem ipsum dolor sit amet, consectetu","L",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-16,AA12-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lo",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-15,AA11-TICKER,"Lorem ipsum dolor sit amet, consectetu",L,2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-16,AA12-TICKER,"Lorem ipsum dolor sit amet, consectetu",Lo,2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
 invention-17,AA13-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
 invention-18,AA14-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-19,AA15-TICKER,"Lorem ipsum dolor sit amet, consectetu","โลเร็ม อิปซัม",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-20,AA16-TICKER,"Lorem ipsum dolor sit amet, consectetu","‎لوريم إيبسوم‎",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-21,AA17-TICKER,"Lorem ipsum dolor sit amet, consectetu","洛伦·伊普森",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-22,AA18-TICKER,"Lorem ipsum dolor sit amet, consectetu","<marquee>Hacked</marquee>",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-23,AA19-TICKER,"Lorem ipsum dolor sit amet, consectetu","<script>alert(‘Hacked!’);</script>",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-24,AA20-TICKER,"Lorem ipsum dolor sit amet, consectetu","' or 'A' = 'A",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-19,AA15-TICKER,"Lorem ipsum dolor sit amet, consectetu",โลเร็ม อิปซัม,2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-20,AA16-TICKER,"Lorem ipsum dolor sit amet, consectetu",‎لوريم إيبسوم‎,2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-21,AA17-TICKER,"Lorem ipsum dolor sit amet, consectetu",洛伦·伊普森,2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-22,AA18-TICKER,"Lorem ipsum dolor sit amet, consectetu",<marquee>Hacked</marquee>,2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-23,AA19-TICKER,"Lorem ipsum dolor sit amet, consectetu",<script>alert(‘Hacked!’);</script>,2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-24,AA20-TICKER,"Lorem ipsum dolor sit amet, consectetu",' or 'A' = 'A,2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-01
 # description - no singular values
 # startMoment - standard variations
 invention-25,AA21-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2000/01/01 00:00,2112/01/02 00:00,http://lorem.com/ipsum,TRUE,inventor-01
@@ -69,6 +69,5 @@ invention-50,AA46-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum d
 # intervalo moments
 invention-51,AA47-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2180/12/31 23:59,http://lorem.com/ipsum,FALSE,inventor-01
 invention-52,AA48-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 23:00,2112/01/02 23:01,http://lorem.com/ipsum,FALSE,inventor-01
-invention-53,AA49-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 23:00,2112/01/02 23:02,http://lorem.com/ipsum,FALSE,inventor-01
+invention-53,AA49-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 23:00,2112/01/02 23:02,http://lorem.com/ipsum,FALSE,inventor-02
 invention-54,AA50-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 23:00,2112/01/02 23:00,http://lorem.com/ipsum,TRUE,inventor-01
-

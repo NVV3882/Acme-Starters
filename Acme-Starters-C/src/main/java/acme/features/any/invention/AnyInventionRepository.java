@@ -17,4 +17,5 @@ public interface AnyInventionRepository extends AbstractRepository {
 
 	@Query("select i from Invention	i where i.id=:id")
 	Invention showInvention(int id);
+
 }

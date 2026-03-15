@@ -20,8 +20,13 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
-			<acme:menu-suboption code="master.menu.anonymous.sponsorships" action="/any/sponsorship/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.list-inventions" action="/any/invention/list"/>
+      <acme:menu-suboption code="master.menu.anonymous.sponsorships" action="/any/sponsorship/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.strategies" action="/any/strategy/list"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.list-inventions" action="/any/invention/list" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
@@ -41,7 +46,9 @@
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
 		
-		
+		<acme:menu-option code="master.menu.inventor" access="hasRealm('Inventor')">
+			<acme:menu-suboption code="master.menu.inventor.list-inventions" action="inventor/invention/list"/>			
+		</acme:menu-option>
 	</acme:menu-left>
 
 	<acme:menu-right>		
@@ -53,6 +60,8 @@
 			<acme:menu-suboption code="master.menu.user-account.sponsor-profile" action="/authenticated/sponsor/update" access="hasRealm('Sponsor')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRealm('Consumer')"/>
 			<acme:menu-suboption code="master.menu.user-account.consumer-profile" action="/authenticated/consumer/update" access="hasRealm('Consumer')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-inventor" action="/authenticated/inventor/create" access="!hasRealm('Inventor')"/>
+			<acme:menu-suboption code="master.menu.user-account.inventor-profile" action="/authenticated/inventor/update" access="hasRealm('Inventor')"/>
 		</acme:menu-option>
 	</acme:menu-right>
 </acme:menu-bar>
