@@ -25,7 +25,14 @@ public class AnyInventionShowService extends AbstractService<Any, Invention> {
 	}
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		// Puedo ver un invento si está publicado, o si yo soy el inventor
+		if (this.invento == null)
+			super.setAuthorised(false);
+		else if (this.invento.getDraftMode().equals(false) || this.invento.getInventor().getUserAccount().getUsername().equals(super.getRequest().getPrincipal().getUsername())) //Compruebo si el inventor es el principal
+			super.setAuthorised(true);
+		else
+			super.setAuthorised(false);
+
 	}
 
 	@Override

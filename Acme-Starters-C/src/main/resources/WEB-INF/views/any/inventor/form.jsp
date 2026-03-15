@@ -5,12 +5,10 @@
 
 <acme:form readonly="true">
 
-	<acme:form-textbox code="any.inventor.form.label.bio" path="name"/>
+	<acme:form-textbox code="any.inventor.form.label.bio" path="bio"/>
 	
-	<acme:form-textarea code="any.inventor.form.label.keyWord" path="description"/>
+	<acme:form-textbox code="any.inventor.form.label.keyWords" path="keyWords"/>
 	
-	<acme:form-money code="any.inventor.form.label.cost" path="cost"/>
+	<acme:form-textbox code="any.inventor.form.label.licensed" path="licensed"/>
 	
-	<acme:form-textbox code="any.inventor.form.label.kind" path="kind"/>
-
 </acme:form>
