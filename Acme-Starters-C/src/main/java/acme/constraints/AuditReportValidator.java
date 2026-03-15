@@ -1,12 +1,16 @@
 
 package acme.constraints;
 
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
+
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.audit.AuditReport;
 import acme.entities.audit.AuditReportRepository;
 
@@ -43,8 +47,18 @@ public class AuditReportValidator extends AbstractValidator<ValidAuditReport, Au
 			{
 				boolean auditSectionsCorrectos;
 
-				auditSectionsCorrectos = this.repositorio.computeHours(audit.getId()) != null || audit.getDraftMode();
+				auditSectionsCorrectos = !this.repositorio.findAuditSectionsByAuditReportId(audit.getId()).isEmpty() || audit.getDraftMode();
 				super.state(context, auditSectionsCorrectos, "*", "acme.validation.audit.correct-audit-sections.message");
+			}
+			{
+				boolean intervaloCorrectoTiempo;
+				Date fechaInicio = audit.getStartMoment();
+				Date fechaFinal = audit.getEndMoment();
+				if (audit.getDraftMode().equals(false))
+					intervaloCorrectoTiempo = MomentHelper.computeDifference(fechaInicio, fechaFinal, ChronoUnit.DAYS) >= 1;
+				else
+					intervaloCorrectoTiempo = true;
+				super.state(context, intervaloCorrectoTiempo, "*", "acme.validation.audit.intervalo-correcto-tiempo.message");
 			}
 			result = !super.hasErrors(context);
 		}
