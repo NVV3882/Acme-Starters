@@ -1,6 +1,7 @@
 
 package acme.entities.strategy;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -17,8 +18,12 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidScore;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MathHelper;
+import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidHeader;
+import acme.constraints.ValidStrategy;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
 import lombok.Getter;
@@ -27,6 +32,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidStrategy
 public class Strategy extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
@@ -51,12 +57,12 @@ public class Strategy extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
+	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				startMoment;
 
 	@Mandatory
-	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
+	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				endMoment;
 
@@ -78,15 +84,22 @@ public class Strategy extends AbstractEntity {
 
 
 	@Transient
-	public Double monthsActive() {
-		return 0.0;
-
+	public Double getMonthsActive() {
+		Date fechaini = this.startMoment;
+		Date fechafin = this.endMoment;
+		if (fechaini == null || fechafin == null)
+			return 0.0;
+		Double res = MomentHelper.computeDifference(fechaini, fechafin, ChronoUnit.MONTHS);
+		MathHelper.roundOff(res, 1);
+		return res;
 	}
 
+	@ValidScore
 	@Transient
 	public Double getExpectedPercentaje() {
-		Double result = this.repository.getExpectedPercentaje();
-		return result;
+		Double result = this.repository.getExpectedPercentaje(this.getId());
+		Double res = result == null ? 0 : result.doubleValue();
+		return res;
 	}
 
 

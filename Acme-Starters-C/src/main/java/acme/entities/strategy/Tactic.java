@@ -8,7 +8,7 @@ import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
-import acme.client.components.validation.ValidNumber;
+import acme.client.components.validation.ValidScore;
 import acme.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,7 +35,7 @@ public class Tactic extends AbstractEntity {
 	private String				notes;
 
 	@Mandatory
-	@ValidNumber(min = 1, max = 100)
+	@ValidScore
 	@Column
 	private Double				expectedPercentaje;
 
