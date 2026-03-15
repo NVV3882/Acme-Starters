@@ -48,18 +48,18 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 
 				Integer numberOfParts = this.repositorio.findNumberOfPartsOfAInventionByInventionId(invention.getId());
 
-				if (invention.getDraftMode() == Boolean.FALSE && numberOfParts == 0)
+				if (invention.getDraftMode() == Boolean.FALSE && numberOfParts == 0) // compruebo que si se publica un invento, este tiene que tener partes asociadadas.
 					correctParts = false;
 
 				super.state(context, correctParts, "*", "acme.validation.invention.published-without-parts.message");
 			}
 			{
-				boolean correctDates = false;
+				boolean correctDates = true;
 
 				//				if (MomentHelper.getBaseMoment().before(invention.getStartMoment()) && MomentHelper.getBaseMoment().before(invention.getEndMoment()))
 				//					correctDates = true;
 
-				if (!invention.getDraftMode())
+				if (invention.getDraftMode().equals(false))
 					if (MomentHelper.isAfter(invention.getStartMoment(), invention.getEndMoment()))
 						correctDates = false;
 
@@ -70,8 +70,10 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 
 				Integer numeroPartes = this.repositorio.countPartOfAnInventionWithCurrencyNotInEurosByInventionId(invention.getId());
 
-				if (numeroPartes == 0) //ya que todas las partes estarian en Euros
+				if (numeroPartes == 0) // compruebo que las partes asociadas a un invento estén siempre en euros. Si un invento todavia no tiene partes asociadas pues no hay problema. 
 					correctCost = true;
+
+				// compruebo que estén en euros siempre, no solo cuando se publica el invento (draftMode = false)
 
 				super.state(context, correctCost, "*", "acme.validation.invention.currency.message");
 			}

@@ -14,4 +14,4 @@ acme.validation.sponsorship.son-donaciones-en-euros.message = Las donaciones de 
 acme.validation.Invention.duplicated-ticker.message  = El código identificador de la invención ya existe
 acme.validation.invention.published-without-parts.message = Las invenciones no pueden publicarse a menos que contengan al menos una parte
 acme.validation.invention.incorrect-dates-intervale.message = El momento de inicio de una Invención debe haber ocurrido antes del momento final siempre que la invencion esta publicada. Además, las fechas startMoment y endMoment deben ser posteriores al baseMoment.
-acme.validation.invention.currency.message = Solo se acepta dinero en divisa Euro.
+acme.validation.invention.currency.message = Solo se acepta dinero en divisa Euro. 

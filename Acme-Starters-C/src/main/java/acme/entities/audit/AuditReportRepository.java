@@ -11,9 +11,15 @@ import acme.client.repositories.AbstractRepository;
 @Repository
 public interface AuditReportRepository extends AbstractRepository {
 
-	@Query("select s from Sponsorship s where s.ticker = :ticker")
+	@Query("select a from AuditReport a where a.ticker = :ticker")
 	AuditReport findAuditReportByTicker(String ticker);
 
-	@Query("select d from Donation d where d.sponsorship.id = :id")
+	@Query("select s from AuditSection s where s.report.id = :id")
 	List<AuditSection> findAuditSectionsByAuditReportId(int id);
+
+	@Query("select s from AuditSection s where s.report.ticker = :ticker")
+	List<AuditSection> findAuditSectionsByAuditReportTicker(String ticker);
+
+	@Query("SELECT SUM(s.hours) FROM AuditSection s WHERE s.report.id = ?1")
+	Integer computeHours(Integer reportId);
 }
