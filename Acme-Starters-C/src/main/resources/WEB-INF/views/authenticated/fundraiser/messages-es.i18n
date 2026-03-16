@@ -1,0 +1,10 @@
+# messages-es.i18n
+
+authenticated.fundraiser.form.title = Detalles de fundraiser
+
+authenticated.fundraiser.form.label.bank = Banco
+authenticated.fundraiser.form.label.statement = Declaración
+authenticated.fundraiser.form.label.agent = Agente
+
+authenticated.fundraiser.form.button.create = Registrarse
+authenticated.fundraiser.form.button.update = Actualizar
