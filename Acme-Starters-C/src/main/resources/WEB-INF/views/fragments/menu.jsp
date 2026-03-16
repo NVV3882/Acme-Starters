@@ -48,12 +48,15 @@
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.auditor" access="hasRealm('Auditor')">
+			<acme:menu-suboption code="master.menu.auditor.favourite-link" action="/auditor/audit-report/list"/>			
+      
 		<acme:menu-option code="master.menu.sponsor" access="hasRealm('Sponsor')">
 			<acme:menu-suboption code="master.menu.sponsor.list-my-sponsorships" action="/sponsor/sponsorship/list" />
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.inventor" access="hasRealm('Inventor')">
-			<acme:menu-suboption code="master.menu.inventor.list-inventions" action="inventor/invention/list"/>			
+			<acme:menu-suboption code="master.menu.inventor.list-inventions" action="/inventor/invention/list"/>			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.fundraiser" access="hasRealm('Fundraiser')">
@@ -79,4 +82,3 @@
 		</acme:menu-option>
 	</acme:menu-right>
 </acme:menu-bar>
-

@@ -52,13 +52,19 @@ public class AuditReportValidator extends AbstractValidator<ValidAuditReport, Au
 			}
 			{
 				boolean intervaloCorrectoTiempo;
+				boolean fechasValidas;
 				Date fechaInicio = audit.getStartMoment();
 				Date fechaFinal = audit.getEndMoment();
 				if (audit.getDraftMode().equals(false))
 					intervaloCorrectoTiempo = MomentHelper.computeDifference(fechaInicio, fechaFinal, ChronoUnit.DAYS) >= 1;
 				else
 					intervaloCorrectoTiempo = true;
-				super.state(context, intervaloCorrectoTiempo, "*", "acme.validation.audit.intervalo-correcto-tiempo.message");
+				if (fechaInicio != null && fechaFinal != null)
+					fechasValidas = MomentHelper.isAfter(fechaFinal, fechaInicio);
+				else
+					fechasValidas = false;
+
+				super.state(context, intervaloCorrectoTiempo && fechasValidas, "*", "acme.validation.invention.incorrect-dates-intervale.message");
 			}
 			result = !super.hasErrors(context);
 		}
