@@ -26,7 +26,13 @@ public class AnySectionListService extends AbstractService<Any, AuditSection> {
 	}
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		Boolean res;
+		int reportId = super.getRequest().getData("reportId", int.class);
+		if (this.repositorio.reportIsPublished(reportId).equals(true))
+			res = true;
+		else
+			res = false;
+		super.setAuthorised(res);
 	}
 
 	@Override

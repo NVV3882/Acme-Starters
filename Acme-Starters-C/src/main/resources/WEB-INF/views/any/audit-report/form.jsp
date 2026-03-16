@@ -12,5 +12,8 @@
 	<acme:form-url code="any.auditReport.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-integer code="any.auditReport.form.label.monthsActive" path="monthsActive"/>
 	<acme:form-integer code="any.auditReport.form.label.hours" path="hours"/>
+	
+	<acme:button code="any.auditReport.form.button.sections" action="/any/audit-section/list?reportId=${id}"/>
+	<acme:button code="any.auditReport.form.button.auditor" action="/any/auditor/show?reportId=${id}"/>	
 
 </acme:form>

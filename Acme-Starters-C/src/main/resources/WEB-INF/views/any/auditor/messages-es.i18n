@@ -1,0 +1,7 @@
+# messages-es.i18n
+
+any.auditor.form.title = Detalles del auditor
+
+any.auditor.form.label.firm = Firma:
+any.auditor.form.label.solicitor = Solicitante:
+any.auditor.form.label.highlights = Destacados:

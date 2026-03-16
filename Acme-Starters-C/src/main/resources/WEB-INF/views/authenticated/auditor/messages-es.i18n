@@ -1,0 +1,10 @@
+# messages-es.i18n
+
+authenticated.auditor.form.title = Detalles de auditor
+
+authenticated.auditor.form.label.firm = Firma:
+authenticated.auditor.form.label.solicitor = Auditor solicitante:
+authenticated.auditor.form.label.highlights = Destacados:
+
+authenticated.auditor.form.button.create = Registrarse
+authenticated.auditor.form.button.update = Actualizar

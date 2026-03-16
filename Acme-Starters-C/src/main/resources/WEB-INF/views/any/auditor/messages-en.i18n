@@ -1,0 +1,7 @@
+# messages-en.i18n
+
+any.auditor.form.title = Auditor details
+
+any.auditor.form.label.firm = Firm:
+any.auditor.form.label.solicitor = Solicitor:
+any.auditor.form.label.highlights = Highlights:
