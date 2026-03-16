@@ -28,6 +28,7 @@
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.list-inventions" action="/any/invention/list" />
+			<acme:menu-suboption code="master.menu.authenticated.list-strategies" action="/any/strategy/list" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
@@ -49,6 +50,10 @@
 		
 		<acme:menu-option code="master.menu.inventor" access="hasRealm('Inventor')">
 			<acme:menu-suboption code="master.menu.inventor.list-inventions" action="inventor/invention/list"/>			
+		</acme:menu-option>
+
+		<acme:menu-option code="master.menu.fundraiser" access="hasRealm('Fundraiser')">
+			<acme:menu-suboption code="master.menu.fundraiser.list-strategies" action="/fundraiser/strategy/list"/>			
 		</acme:menu-option>
 	</acme:menu-left>
 

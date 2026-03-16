@@ -21,6 +21,7 @@ master.menu.anonymous.auditReports = Reportes de auditoría
 
 master.menu.authenticated = Autenticado
 master.menu.authenticated.list-inventions = Lista inventos
+master.menu.authenticated.list-strategies = Lista strategias
 
 # master.menu.administrator ###################################################
 
@@ -71,4 +72,7 @@ master.menu.user-account.auditor-profile = Perfil de auditor
 
 master.menu.inventor = Inventor
 master.menu.inventor.list-inventions = Listar mis inventos
+
+master.menu.fundraiser = Recaudador
+master.menu.inventor.list-strategies = Listar mis estrategias
 
