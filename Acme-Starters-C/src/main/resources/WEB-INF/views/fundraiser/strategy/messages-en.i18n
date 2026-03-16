@@ -1,0 +1,25 @@
+# messages-en.i18n
+
+fundraiser.strategy.list.title = Strategy list
+fundraiser.strategy.list.label.ticker = Ticker
+fundraiser.strategy.list.label.name = Name
+fundraiser.strategy.list.label.startMoment = Start moment
+fundraiser.strategy.list.label.endMoment = End moment
+fundraiser.strategy.list.label.draftMode = Draft mode
+fundraiser.strategy.list.button.create = Create strategy
+
+fundraiser.strategy.form.title = Strategy details
+fundraiser.strategy.form.label.ticker = Ticker
+fundraiser.strategy.form.label.name = Name
+fundraiser.strategy.form.label.description = Description
+fundraiser.strategy.form.label.startMoment = Start moment
+fundraiser.strategy.form.label.endMoment = End moment
+fundraiser.strategy.form.label.moreInfo = More info
+fundraiser.strategy.form.label.monthsActive = Months active
+fundraiser.strategy.form.label.expectedPercentage = Expected percentage
+
+fundraiser.strategy.form.button.tactics = Tactics
+fundraiser.strategy.form.button.create = Create
+fundraiser.strategy.form.button.update = Update
+fundraiser.strategy.form.button.delete = Delete
+fundraiser.strategy.form.button.publish = Publish

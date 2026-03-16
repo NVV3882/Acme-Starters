@@ -28,6 +28,7 @@
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.list-inventions" action="/any/invention/list" />
+			<acme:menu-suboption code="master.menu.authenticated.list-strategies" action="/any/strategy/list" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
@@ -49,10 +50,17 @@
 		
 		<acme:menu-option code="master.menu.auditor" access="hasRealm('Auditor')">
 			<acme:menu-suboption code="master.menu.auditor.favourite-link" action="/auditor/audit-report/list"/>			
+      
+		<acme:menu-option code="master.menu.sponsor" access="hasRealm('Sponsor')">
+			<acme:menu-suboption code="master.menu.sponsor.list-my-sponsorships" action="/sponsor/sponsorship/list" />
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.inventor" access="hasRealm('Inventor')">
 			<acme:menu-suboption code="master.menu.inventor.list-inventions" action="/inventor/invention/list"/>			
+		</acme:menu-option>
+
+		<acme:menu-option code="master.menu.fundraiser" access="hasRealm('Fundraiser')">
+			<acme:menu-suboption code="master.menu.fundraiser.list-strategies" action="/fundraiser/strategy/list"/>			
 		</acme:menu-option>
 	</acme:menu-left>
 
@@ -67,6 +75,8 @@
 			<acme:menu-suboption code="master.menu.user-account.auditor-profile" action="/authenticated/auditor/update" access="hasRealm('Auditor')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRealm('Consumer')"/>
 			<acme:menu-suboption code="master.menu.user-account.consumer-profile" action="/authenticated/consumer/update" access="hasRealm('Consumer')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-fundraiser" action="/authenticated/fundraiser/create" access="!hasRealm('Fundraiser')"/>
+			<acme:menu-suboption code="master.menu.user-account.fundraiser-profile" action="/authenticated/fundraiser/update" access="hasRealm('Fundraiser')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-inventor" action="/authenticated/inventor/create" access="!hasRealm('Inventor')"/>
 			<acme:menu-suboption code="master.menu.user-account.inventor-profile" action="/authenticated/inventor/update" access="hasRealm('Inventor')"/>
 		</acme:menu-option>
