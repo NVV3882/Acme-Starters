@@ -63,6 +63,9 @@ sponsorship-48,AA44-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum
 # moreInfo - no singular variations
 # draft-mode - standard variations
 sponsorship-49,AA45-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/02/03 00:00,http://lorem.com/ipsum,FALSE,sponsor-01
-# draft-mode no singular variations
+# draft-mode - no singular variations
 # sponsor - standard variations
 sponsorship-50,AA46-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/02/03 00:00,http://lorem.com/ipsum,TRUE,sponsor-02
+# interval - standard variations
+sponsorship-51,AA47-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/02 00:01,http://lorem.com/ipsum,FALSE,sponsor-01
+# interval - no singular variations

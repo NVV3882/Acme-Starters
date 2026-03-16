@@ -33,3 +33,7 @@ sponsorship-16,AA11-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum
 # draftMode - no singular values
 # sponsor - standard variations
 # sponsor - no singular values
+# interval - standard variations
+sponsorship-17,AA12-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/02 00:00,http://lorem.com/ipsum,FALSE,sponsor-01
+sponsorship-18,AA13-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/01 23:59,http://lorem.com/ipsum,FALSE,sponsor-01
+# interval - no singular values
