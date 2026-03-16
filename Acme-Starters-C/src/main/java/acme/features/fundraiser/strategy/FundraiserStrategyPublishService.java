@@ -38,7 +38,7 @@ public class FundraiserStrategyPublishService extends AbstractService<Fundraiser
 
 	@Override
 	public void validate() {
-		// TODO
+		super.validateObject(this.strategy);
 	}
 
 	@Override
@@ -49,6 +49,6 @@ public class FundraiserStrategyPublishService extends AbstractService<Fundraiser
 
 	@Override
 	public void unbind() {
-		//TODO
+		super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 	}
 }
