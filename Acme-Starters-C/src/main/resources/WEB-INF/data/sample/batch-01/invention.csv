@@ -65,9 +65,6 @@ invention-48,AA44-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum d
 invention-49,AA45-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,FALSE,inventor-01
 # draft-mode no singular variations
 # inventor - standard variations
-invention-50,AA46-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,TRUE,inventor-02
+invention-50,AA46-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2112/01/03 00:00,http://lorem.com/ipsum,FALSE,inventor-02
 # intervalo moments
-invention-51,AA47-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 00:00,2180/12/31 23:59,http://lorem.com/ipsum,FALSE,inventor-01
-invention-52,AA48-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 23:00,2112/01/02 23:01,http://lorem.com/ipsum,FALSE,inventor-01
-invention-53,AA49-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 23:00,2112/01/02 23:02,http://lorem.com/ipsum,FALSE,inventor-02
-invention-54,AA50-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 23:00,2112/01/02 23:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-51,AA48-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/01/02 23:00,2112/01/02 23:01,http://lorem.com/ipsum,FALSE,inventor-01
