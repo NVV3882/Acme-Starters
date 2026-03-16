@@ -33,8 +33,9 @@ donation-24,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet
 # money - no singular values
 # kind - standard variations
 donation-25,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500.00,REWARDED,sponsorship-00
-donation-26,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500.00,CELEBRATED,sponsorship-00
+donation-26,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500.00,CELEBRATED,sponsorship-51
 # kind - no singular values
 # sponsorship - standard variations
 donation-27,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500.00,ALTRUIST,sponsorship-49
+# sponsorship - no singular values
 

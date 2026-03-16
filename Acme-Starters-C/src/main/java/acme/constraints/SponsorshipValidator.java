@@ -1,7 +1,6 @@
 
 package acme.constraints;
 
-import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.validation.ConstraintValidatorContext;
@@ -46,6 +45,7 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 				super.state(context, patrocinioUnico, "ticker", "acme.validation.sponsorship.duplicated-ticker.message");
 			}
 			{
+
 				boolean publicadoConDonaciones;
 				boolean tieneDonaciones = false;
 				if (this.repositorio.sumDonationsOfSponsorship(patrocinio.getId()) != null)
@@ -55,14 +55,13 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 				super.state(context, publicadoConDonaciones, "*", "acme.validation.sponsorship.publicado-sin-donaciones.message");
 			}
 			{
-				boolean intervaloCorrectoTiempo;
-				Date fechaInicio = patrocinio.getStartMoment();
-				Date fechaFinal = patrocinio.getEndMoment();
-				if (patrocinio.getDraftMode().equals(false))
-					intervaloCorrectoTiempo = MomentHelper.computeDifference(fechaInicio, fechaFinal, ChronoUnit.DAYS) >= 1;
-				else
-					intervaloCorrectoTiempo = true;
-				super.state(context, intervaloCorrectoTiempo, "*", "acme.validation.sponsorship.intervalo-correcto-tiempo.message");
+				if (patrocinio.getDraftMode().equals(false)) {
+					boolean intervaloCorrectoTiempo;
+					Date fechaInicio = patrocinio.getStartMoment();
+					Date fechaFinal = patrocinio.getEndMoment();
+					intervaloCorrectoTiempo = fechaInicio != null && fechaFinal != null && MomentHelper.isAfter(fechaFinal, fechaInicio);
+					super.state(context, intervaloCorrectoTiempo, "*", "acme.validation.sponsorship.intervalo-correcto-tiempo.message");
+				}
 			}
 
 			{
