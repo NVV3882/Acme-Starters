@@ -1,0 +1,31 @@
+# messages-es.i18n
+
+sponsor.sponsorship.list.title = Lista de patrocinios
+
+sponsor.sponsorship.list.label.ticker = Ticker
+sponsor.sponsorship.list.label.name = Nombre
+sponsor.sponsorship.list.label.startMoment = Fecha de inicio
+sponsor.sponsorship.list.label.endMoment = Fecha de fin
+sponsor.sponsorship.list.label.monthsActive = Meses activo
+sponsor.sponsorship.list.label.totalMoney = Dinero total
+sponsor.sponsorship.list.label.draftMode = Modo borrador
+
+sponsor.sponsorship.list.button.create = Crear patrocinio
+
+sponsor.sponsorship.form.title = Formulario de patrocinio
+
+sponsor.sponsorship.form.label.ticker = Ticker
+sponsor.sponsorship.form.label.name = Nombre
+sponsor.sponsorship.form.label.description = Descripción
+sponsor.sponsorship.form.label.startMoment = Fecha de inicio
+sponsor.sponsorship.form.label.endMoment = Fecha de fin
+sponsor.sponsorship.form.label.moreInfo = Más información
+sponsor.sponsorship.form.label.draftMode = Borrador
+sponsor.sponsorship.form.label.monthsActive = Meses Activo
+sponsor.sponsorship.form.label.totalMoney = Dinero total
+
+sponsor.sponsorship.form.button.donations = Donaciones
+sponsor.sponsorship.form.button.update = Actualizar
+sponsor.sponsorship.form.button.delete = Eliminar
+sponsor.sponsorship.form.button.publish = Publicar
+sponsor.sponsorship.form.button.create = Crear
