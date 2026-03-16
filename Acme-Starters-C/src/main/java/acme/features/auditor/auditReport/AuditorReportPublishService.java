@@ -1,11 +1,14 @@
 
 package acme.features.auditor.auditReport;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.audit.AuditReport;
 import acme.entities.audit.AuditSection;
@@ -46,6 +49,16 @@ public class AuditorReportPublishService extends AbstractService<Auditor, AuditR
 	public void validate() {
 
 		super.validateObject(this.report);
+
+		boolean intervaloCorrectoTiempo;
+		Date fechaInicio = this.report.getStartMoment();
+		Date fechaFinal = this.report.getEndMoment();
+		if (fechaInicio != null && fechaFinal != null)
+			intervaloCorrectoTiempo = MomentHelper.computeDifference(fechaInicio, fechaFinal, ChronoUnit.DAYS) >= 1 && MomentHelper.isAfter(fechaFinal, fechaInicio);
+		else
+			intervaloCorrectoTiempo = true;
+
+		this.state(intervaloCorrectoTiempo, "publish", "auditor.audit-report.form.error.incorrectDates");
 
 		Collection<AuditSection> sections;
 		sections = this.repository.findSectionsByAuditReportId(this.report.getId());
