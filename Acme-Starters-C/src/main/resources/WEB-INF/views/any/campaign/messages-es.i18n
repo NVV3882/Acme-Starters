@@ -1,0 +1,24 @@
+# messages-es.i18n
+
+any.campaign.list.title = Lista de campañas publicados
+
+any.campaign.list.label.ticker = Ticker
+any.campaign.list.label.name = Nombre
+any.campaign.list.label.startMoment = Fecha de inicio
+any.campaign.list.label.endMoment = Fecha de fin
+any.campaign.list.label.monthsActive = Meses activo
+any.campaign.list.label.effort = Esfuerzo total
+
+
+any.campaign.form.title = Detalles de la campaña
+
+any.campaign.form.label.ticker = Ticker:
+any.campaign.form.label.name = Nombre:
+any.campaign.form.label.description = Descripción:
+any.campaign.form.label.startMoment = Fecha de inicio:
+any.campaign.form.label.endMoment = Fecha de fin:
+any.campaign.form.label.moreInfo = Más información:
+any.campaign.form.label.monthsActive = Meses activo:
+any.campaign.form.label.effort = Esfuerzo total:
+any.campaign.form.button.milestones = Hitos
+any.campaign.form.button.spokesperson = Portavoz
