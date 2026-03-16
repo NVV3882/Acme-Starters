@@ -10,8 +10,10 @@
 	<acme:form-moment code="any.invention.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment code="any.invention.form.label.endMoment" path="endMoment"/>
 	<acme:form-url code="any.invention.form.label.moreInfo" path="moreInfo"/>
-	<acme:form-integer code="any.invention.form.label.monthsActive" path="monthsActive"/>
+	<acme:form-double code="any.invention.form.label.monthsActive" path="monthsActive"/>
 	<acme:form-money code="any.invention.form.label.cost" path="cost"/>
 	
 	<acme:button code="any.invention.form.button.parts" action="/any/part/list?inventionId=${id}"/>
-</acme:form>
+	<acme:button code="any.invention.form.button.inventor" action="/any/inventor/show?inventionId=${id}"/>
+	
+</acme:form>	

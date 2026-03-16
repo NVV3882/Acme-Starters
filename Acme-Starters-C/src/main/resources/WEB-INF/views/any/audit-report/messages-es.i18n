@@ -19,4 +19,6 @@ any.auditReport.form.label.endMoment = Fecha de fin:
 any.auditReport.form.label.moreInfo = Más información:
 any.auditReport.form.label.monthsActive = Meses activo:
 any.auditReport.form.label.hours = Horas totales:
+
 any.auditReport.form.button.auditSections = Secciones de auditoría
+any.auditReport.form.button.auditor = Auditor
