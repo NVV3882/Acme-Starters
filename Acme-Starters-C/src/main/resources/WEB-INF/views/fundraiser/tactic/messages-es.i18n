@@ -15,3 +15,6 @@ fundraiser.tactic.form.label.kind = Tipo
 fundraiser.tactic.form.button.create = Crear
 fundraiser.tactic.form.button.update = Actualizar
 fundraiser.tactic.form.button.delete = Eliminar
+
+fundraiser.tactic.valid.score = El porcentage esperado debe estar entre 0 y 100
+

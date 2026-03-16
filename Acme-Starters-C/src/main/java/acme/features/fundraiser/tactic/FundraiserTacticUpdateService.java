@@ -44,7 +44,11 @@ public class FundraiserTacticUpdateService extends AbstractService<Fundraiser, T
 	@Override
 	public void validate() {
 		super.validateObject(this.tactic);
-        //TODO
+
+		Double otherPercentages = this.repository.getExpectedPercentageExcluding(this.tactic.getStrategy().getId(), this.tactic.getId());
+		if (otherPercentages == null) otherPercentages = 0.0;
+		boolean percentageValid = otherPercentages + this.tactic.getExpectedPercentage() <= 100.0;
+		super.state(percentageValid, "expectedPercentage", "fundraiser.tactic.valid.score");
 	}
 
 	@Override
@@ -60,7 +64,7 @@ public class FundraiserTacticUpdateService extends AbstractService<Fundraiser, T
 		choices = SelectChoices.from(TacticKind.class, this.tactic.getKind());
 
 		tuple = super.unbindObject(this.tactic, "name", "notes", "expectedPercentage", "kind");
-		tuple.put("strategyId", super.getRequest().getData("strategyId", int.class));
+		tuple.put("strategyId", this.tactic.getStrategy().getId());
 		tuple.put("draftMode", this.tactic.getStrategy().getDraftMode());
 		tuple.put("kinds", choices);
 	}

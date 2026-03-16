@@ -46,7 +46,7 @@ public class FundraiserTacticCreateService extends AbstractService<Fundraiser, T
 
 		Double currentPercentage = this.tactic.getStrategy().getExpectedPercentage();
 		boolean percentageValid = currentPercentage + this.tactic.getExpectedPercentage() <= 100.00;
-		super.state(percentageValid, "expectedPercentage", "acme.valid.tactic.score"); // cambiar codigo error
+		super.state(percentageValid, "expectedPercentage", "fundraiser.tactic.valid.score");
 	}
 
 	@Override
