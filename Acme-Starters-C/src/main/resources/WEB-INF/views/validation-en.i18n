@@ -14,3 +14,4 @@ acme.validation.Invention.duplicated-ticker.message  = The ticker is already in 
 acme.validation.invention.published-without-parts.message = The Invention can not be published unless it has 1 part minimum
 acme.validation.invention.incorrect-dates-intervale.message = The start moment of an invention must be before the end moment if the invention is published. Additionally, the startMoment and endMoment must be after the baseMoment
 acme.validation.invention.currency.message = The application only accept money with the currency Euros
+acme.validation.invention.correctsMoments.message = At the time of publication of an invention, both dates must be future, and the start date must be before the end date.
