@@ -1,0 +1,10 @@
+# messages-es.i18n
+
+authenticated.spokesperson.form.title = Detalles de portavoz
+
+authenticated.spokesperson.form.label.cv = CV:
+authenticated.spokesperson.form.label.achievements = Logros:
+authenticated.spokesperson.form.label.licensed = Licenciado:
+
+authenticated.spokesperson.form.button.create = Registrarse
+authenticated.spokesperson.form.button.update = Actualizar
