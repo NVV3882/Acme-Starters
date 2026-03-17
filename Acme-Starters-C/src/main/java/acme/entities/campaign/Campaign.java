@@ -82,7 +82,7 @@ public class Campaign extends AbstractEntity {
 
 
 	@Transient
-	private Double monthsActive() {
+	public Double getMonthsActive() {
 		Date fechaini = this.startMoment;
 		Date fechafin = this.endMoment;
 
@@ -98,7 +98,8 @@ public class Campaign extends AbstractEntity {
 		double result = 0.0;
 		Double suma = this.repository.getEffortById(this.getId());
 		if (suma == null)
-			result = 0.0;
+			return 0.0;
+		result += suma;
 		return result;
 	}
 
