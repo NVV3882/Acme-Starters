@@ -55,6 +55,8 @@ master.menu.user-account.become-fundraiser = Hacerse recaudador
 master.menu.user-account.fundraiser-profile = Perfil de recaudador
 master.menu.user-account.become-auditor = Hacerse auditor
 master.menu.user-account.auditor-profile = Perfil de auditor
+master.menu.user-account.become-spokesperson = Hacerse portavoz
+master.menu.user-account.spokesperson-profile = Perfil de portavoz
 
 # master.menu.inventor ####################################################
 
@@ -64,3 +66,5 @@ master.menu.inventor.list-inventions = Listar mis inventos
 master.menu.fundraiser = Recaudador
 master.menu.inventor.list-strategies = Listar mis estrategias
 
+master.menu.spokesperson = Portavoz
+master.menu.spokesperson.list-campaigns = Listar mis campañas

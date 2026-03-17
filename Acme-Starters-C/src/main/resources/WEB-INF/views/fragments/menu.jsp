@@ -20,7 +20,7 @@
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.list-inventions" action="/any/invention/list"/>
-      <acme:menu-suboption code="master.menu.anonymous.sponsorships" action="/any/sponsorship/list"/>
+      		<acme:menu-suboption code="master.menu.anonymous.sponsorships" action="/any/sponsorship/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.strategies" action="/any/strategy/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.auditReports" action="/any/audit-report/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.campaigns" action="/any/campaign/list"/>
@@ -57,6 +57,11 @@
 		<acme:menu-option code="master.menu.fundraiser" access="hasRealm('Fundraiser')">
 			<acme:menu-suboption code="master.menu.fundraiser.list-strategies" action="/fundraiser/strategy/list"/>			
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.spokesperson" access="hasRealm('Spokesperson')">
+			<acme:menu-suboption code="master.menu.spokesperson.list-campaigns" action="/spokesperson/campaign/list"/>			
+		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>		
@@ -70,6 +75,8 @@
 			<acme:menu-suboption code="master.menu.user-account.fundraiser-profile" action="/authenticated/fundraiser/update" access="hasRealm('Fundraiser')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-inventor" action="/authenticated/inventor/create" access="!hasRealm('Inventor')"/>
 			<acme:menu-suboption code="master.menu.user-account.inventor-profile" action="/authenticated/inventor/update" access="hasRealm('Inventor')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-spokesperson" action="/authenticated/spokesperson/create" access="!hasRealm('Spokesperson')"/>
+			<acme:menu-suboption code="master.menu.user-account.spokesperson-profile" action="/authenticated/spokesperson/update" access="hasRealm('Spokesperson')"/>
 		</acme:menu-option>
 	</acme:menu-right>
 </acme:menu-bar>
