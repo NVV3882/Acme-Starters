@@ -1,4 +1,3 @@
-
 package acme.features.fundraiser.strategy;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,8 @@ public class FundraiserStrategyCreateService extends AbstractService<Fundraiser,
 
 	@Override
 	public void load() {
-		Fundraiser fundraiser = (Fundraiser) super.getRequest().getPrincipal().getActiveRealm();
+		int fundraiserId = super.getRequest().getPrincipal().getActiveRealm().getId();
+		Fundraiser fundraiser = this.repository.findFundraiserById(fundraiserId);
 
 		this.strategy = super.newObject(Strategy.class);
 		this.strategy.setDraftMode(true);
