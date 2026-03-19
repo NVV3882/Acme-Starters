@@ -1,0 +1,15 @@
+# messages-es.i18n
+
+any.milestone.list.title = Lista de hitos
+
+any.milestone.list.label.title = Titulo
+any.milestone.list.label.effort = Esfuerzo
+any.milestone.list.label.kind = Tipo
+
+
+any.milestone.form.title = Detalles del hito
+
+any.milestone.form.label.title = Titulo:
+any.milestone.form.label.achievements = Logros:
+any.milestone.form.label.effort = Esfuerzo:
+any.milestone.form.label.kind = Tipo:

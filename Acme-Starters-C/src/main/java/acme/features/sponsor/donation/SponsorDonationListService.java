@@ -39,8 +39,9 @@ public class SponsorDonationListService extends AbstractService<Sponsor, Donatio
 	@Override
 	public void unbind() {
 		int sponsorshipId = super.getRequest().getData("sponsorshipId", int.class);
+		Sponsorship patrocinio = this.repositorio.findSponsorshipBySponsorshipId(sponsorshipId);
 		super.unbindObjects(this.donaciones, "name", "notes", "money", "kind");
 		super.unbindGlobal("sponsorshipId", sponsorshipId);
-
+		super.unbindGlobal("draftMode", patrocinio.getDraftMode());
 	}
 }

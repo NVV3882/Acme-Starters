@@ -18,4 +18,7 @@ public interface SponsorshipRepository extends AbstractRepository {
 	@Query("select count(d) from Donation d where d.sponsorship.id = :id and d.money.currency!='EUR'")
 	int countNonEuroDonations(int id);
 
+	@Query("select count(d) from Donation d where d.sponsorship.id =:sponsorshipId")
+	int countDonationsBySponsorshipId(int sponsorshipId);
+
 }

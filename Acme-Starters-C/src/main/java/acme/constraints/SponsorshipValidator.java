@@ -48,8 +48,8 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 
 				boolean publicadoConDonaciones;
 				boolean tieneDonaciones = false;
-				if (this.repositorio.sumDonationsOfSponsorship(patrocinio.getId()) != null)
-					tieneDonaciones = true;
+				Integer numeroDonaciones = this.repositorio.countDonationsBySponsorshipId(patrocinio.getId());
+				tieneDonaciones = numeroDonaciones != null && numeroDonaciones >= 1;
 				publicadoConDonaciones = patrocinio.getDraftMode() || tieneDonaciones;
 
 				super.state(context, publicadoConDonaciones, "*", "acme.validation.sponsorship.publicado-sin-donaciones.message");
