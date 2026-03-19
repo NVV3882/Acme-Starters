@@ -1,4 +1,3 @@
-
 package acme.features.fundraiser.tactic;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,8 +44,11 @@ public class FundraiserTacticCreateService extends AbstractService<Fundraiser, T
 		super.validateObject(this.tactic);
 
 		Double currentPercentage = this.tactic.getStrategy().getExpectedPercentage();
-		boolean percentageValid = currentPercentage + this.tactic.getExpectedPercentage() <= 100.00;
-		super.state(percentageValid, "expectedPercentage", "fundraiser.tactic.valid.score");
+		Double tacticPercentage = this.tactic.getExpectedPercentage();
+		if (currentPercentage != null && tacticPercentage != null) {
+			boolean percentageValid = currentPercentage + tacticPercentage <= 100.00;
+			super.state(percentageValid, "expectedPercentage", "fundraiser.tactic.valid.score");
+		}
 	}
 
 	@Override

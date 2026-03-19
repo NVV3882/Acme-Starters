@@ -1,4 +1,3 @@
-
 package acme.features.fundraiser.tactic;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,12 +38,13 @@ public class FundraiserTacticDeleteService extends AbstractService<Fundraiser, T
 
 	@Override
 	public void bind() {
-		super.bindObject(this.tactic, "name", "notes", "expectedPercentage", "kind");
+		super.bindObject(this.tactic, "name", "notes", "expectedPercentage", "kind")
+		;
 	}
 
 	@Override
 	public void validate() {
-		super.validateObject(this.tactic);
+		super.validateObject(this.tactic)
 		;
 	}
 
@@ -61,7 +61,7 @@ public class FundraiserTacticDeleteService extends AbstractService<Fundraiser, T
 		choices = SelectChoices.from(TacticKind.class, this.tactic.getKind());
 
 		tuple = super.unbindObject(this.tactic, "name", "notes", "expectedPercentage", "kind");
-		tuple.put("strategyId", super.getRequest().getData("strategyId", int.class));
+		tuple.put("strategyId", this.tactic.getStrategy().getId());
 		tuple.put("draftMode", this.tactic.getStrategy().getDraftMode());
 		tuple.put("kinds", choices);
 	}
