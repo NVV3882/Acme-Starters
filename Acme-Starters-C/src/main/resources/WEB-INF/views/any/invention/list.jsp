@@ -5,13 +5,14 @@
 
 <acme:list>
 	<acme:list-column code="any.invention.list.label.ticker" path="ticker" width="20%"/>
-	<acme:list-column code="any.invention.list.label.name" path="name" width="40%"/>
+	<acme:list-column code="any.invention.list.label.name" path="name" width="20%"/>
 	<acme:list-column code="any.invention.list.label.startMoment" path="startMoment" width="20%"/>
 	<acme:list-column code="any.invention.list.label.endMoment" path="endMoment" width="20%"/>
+	<acme:list-column code="any.invention.list.label.draftMode" path="draftMode" width="20%"/>
+	
 	
 	<acme:list-hidden path="description"/>
 	<acme:list-hidden path="moreInfo"/>
-	<acme:list-hidden path="draftMode"/>
 	<acme:list-hidden path="monthsActive"/>
 	<acme:list-hidden path="cost"/>
 </acme:list>

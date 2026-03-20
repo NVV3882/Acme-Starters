@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.campaign.Campaign;
 import acme.entities.campaign.CampaignRepository;
 
@@ -52,20 +53,18 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 			}
 			{
-				boolean intervaloCorrectoTiempo;
-				Date fechaInicio = campaign.getStartMoment();
-				Date fechaFinal = campaign.getEndMoment();
-				if (campaign.getDraftMode().equals(false))
-					intervaloCorrectoTiempo = fechaFinal.after(fechaInicio);
-				else if (fechaInicio == null || fechaFinal == null)
-					intervaloCorrectoTiempo = false;
-				else
-					intervaloCorrectoTiempo = true;
-				super.state(context, intervaloCorrectoTiempo, "*", "acme.validation.campaign.intervalo-correcto-tiempo.message");
+				if (campaign.getDraftMode().equals(false)) {
+					boolean intervaloCorrectoTiempo;
+					Date fechaInicio = campaign.getStartMoment();
+					Date fechaFinal = campaign.getEndMoment();
+					intervaloCorrectoTiempo = fechaInicio != null && fechaFinal != null && MomentHelper.isAfter(fechaFinal, fechaInicio);
+					super.state(context, intervaloCorrectoTiempo, "startMoment", "acme.validation.campaign.intervalo-correcto-tiempo.message");
+				}
 			}
+			result = !super.hasErrors(context);
 		}
 
-		return true;
+		return result;
 	}
 
 }

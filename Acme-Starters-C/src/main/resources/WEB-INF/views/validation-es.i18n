@@ -29,3 +29,21 @@ acme.validation.audit-report.donations.error = El informe de auditoría debe ten
 acme.validation.audit-report.dates.error = El momento de inicio y el momento de fin deben formar un intervalo válido
 acme.validation.audit-report.startMoment.future = El startMoment debe ser posterior al momento de publicación
 acme.validation.audit-report.endMoment.future = El endMoment debe ser posterior al momento de publicación
+acme.validation.invention.correctsMoments.message = En el momento de publicación de un invento, ambas fechas deben ser futuras, y el fecha de inicio debe ser antes de la fecha de fin.
+acme.validation.invention.MinimoUnaParteParaSerPublicado = Las invenciones no pueden publicarse a menos que contengan al menos una parte.
+
+acme.validation.strategy.tactics.error = No se puede publicar una estrategia sin al menos una táctica
+acme.validation.strategy.dates.error = La fecha de inicio debe ser anterior a la fecha de fin
+acme.validation.strategy.startMoment.future = La fecha de inicio debe estar en el futuro
+acme.validation.strategy.endMoment.future = La fecha de fin debe estar en el futuro
+acme.validation.strategy.duplicated-ticker.message = El ticker de la estrategia ya existe
+acme.validation.strategy.publicado-sin-tactics.message = No se puede publicar una estrategia sin al menos una táctica
+acme.validation.strategy.intervalo-correcto-tiempo.message = El intervalo entre inicio y fin debe ser válido y futuro para una estrategia publicada
+
+acme.validation.campaign.duplicated-ticker.message = Referencia ya usada
+acme.validation.campaign.publicado-sin-milestone.message = No se puede publicar una campana sin al menos un hito
+acme.validation.campaign.intervalo-correcto-tiempo.message = El intervalo del comienzo y el final de una campana se debe encontrar en un momento futuro desde que se publica la campana
+acme.validation.campaign.milestones.error = La campana debe tener al menos un hito en el momento de su publicacion
+acme.validation.campaign.dates.error = La fecha de inicio y fin deben formar un intervalo valido
+acme.validation.campaign.startMoment.future = La fecha de inicio debe ser posterior al momento de publicacion
+acme.validation.campaign.endMoment.future = La fecha de fin debe ser posterior al momento de publicacion

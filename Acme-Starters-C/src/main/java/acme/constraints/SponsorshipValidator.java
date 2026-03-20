@@ -52,7 +52,7 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 				tieneDonaciones = numeroDonaciones != null && numeroDonaciones >= 1;
 				publicadoConDonaciones = patrocinio.getDraftMode() || tieneDonaciones;
 
-				super.state(context, publicadoConDonaciones, "*", "acme.validation.sponsorship.publicado-sin-donaciones.message");
+				super.state(context, publicadoConDonaciones, "totalMoney", "acme.validation.sponsorship.publicado-sin-donaciones.message");
 			}
 			{
 				if (patrocinio.getDraftMode().equals(false)) {
@@ -60,7 +60,7 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 					Date fechaInicio = patrocinio.getStartMoment();
 					Date fechaFinal = patrocinio.getEndMoment();
 					intervaloCorrectoTiempo = fechaInicio != null && fechaFinal != null && MomentHelper.isAfter(fechaFinal, fechaInicio);
-					super.state(context, intervaloCorrectoTiempo, "*", "acme.validation.sponsorship.intervalo-correcto-tiempo.message");
+					super.state(context, intervaloCorrectoTiempo, "startMoment", "acme.validation.sponsorship.intervalo-correcto-tiempo.message");
 				}
 			}
 
@@ -69,7 +69,7 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 
 				sonDonacionesEnEuros = this.repositorio.countNonEuroDonations(patrocinio.getId()) == 0;
 
-				super.state(context, sonDonacionesEnEuros, "*", "acme.validation.sponsorship.son-donaciones-en-euros.message");
+				super.state(context, sonDonacionesEnEuros, "totalMoney", "acme.validation.sponsorship.son-donaciones-en-euros.message");
 			}
 			result = !super.hasErrors(context);
 		}

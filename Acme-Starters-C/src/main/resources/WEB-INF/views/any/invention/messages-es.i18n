@@ -8,6 +8,7 @@ any.invention.list.label.startMoment = Fecha inicio
 any.invention.list.label.endMoment = Fecha fin
 any.invention.list.label.monthsActive = Meses activo
 any.invention.list.label.totalMoney = Coste
+any.invention.list.label.draftMode = Modo Borrador
 
 any.invention.form.title = Detalles del invento
 
@@ -19,6 +20,8 @@ any.invention.form.label.endMoment = Fecha de fin:
 any.invention.form.label.moreInfo = Mas información:
 any.invention.form.label.monthsActive = Meses activo:
 any.invention.form.label.cost = Coste:
+any.invention.form.label.draftMode = Modo Borrador:
+
 
 any.invention.form.button.parts = Parts
 any.invention.form.button.inventor = Inventor
