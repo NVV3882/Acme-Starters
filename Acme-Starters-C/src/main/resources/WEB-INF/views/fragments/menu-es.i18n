@@ -10,22 +10,22 @@
 
 # master.menu.anonymous #######################################################
 
-master.menu.anonymous = Anónimo
-master.menu.anonymous.list-inventions = Lista inventos
+master.menu.anonymous = Cualquiera
+master.menu.anonymous.list-inventions = Inventos
 master.menu.anonymous.sponsorships = Patrocinios
 master.menu.anonymous.strategies = Estrategias
-master.menu.anonymous.auditReports = Informes de auditoría
+master.menu.anonymous.auditReports = Informes de Auditoría
 master.menu.anonymous.campaigns = Campañas
 
 
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Cualquiera
-master.menu.authenticated.list-inventions = Lista inventos
-master.menu.authenticated.list-strategies = Lista strategias
-master.menu.authenticated.list-sponsorships = Lista patrocinios
-master.menu.authenticated.list-audit-reports = Lista Informes de Auditoría
-master.menu.authenticated.list-campaigns = Lista campañas
+master.menu.authenticated.list-inventions = Inventos
+master.menu.authenticated.list-strategies = Estrategias
+master.menu.authenticated.list-sponsorships = Patrocinios
+master.menu.authenticated.list-audit-reports = Informes de Auditoría
+master.menu.authenticated.list-campaigns = Campañas
 
 
 # master.menu.administrator ###################################################
