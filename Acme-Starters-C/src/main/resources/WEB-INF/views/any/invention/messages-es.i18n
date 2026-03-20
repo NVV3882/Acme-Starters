@@ -6,8 +6,6 @@ any.invention.list.label.ticker = Ticker
 any.invention.list.label.name = Nombre
 any.invention.list.label.startMoment = Fecha inicio
 any.invention.list.label.endMoment = Fecha fin
-any.invention.list.label.monthsActive = Meses activo
-any.invention.list.label.totalMoney = Coste
 any.invention.list.label.draftMode = Modo Borrador
 
 any.invention.form.title = Detalles del invento

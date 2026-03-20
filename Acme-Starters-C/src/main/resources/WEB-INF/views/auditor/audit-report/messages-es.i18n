@@ -29,4 +29,3 @@ auditor.audit-report.form.button.save = Guardar
 
 # Mensajes de error
 auditor.audit-report.form.error.noSections = No puede publicar un informe sin al menos una sección de auditoría.
-auditor.audit-report.form.error.incorrectDates = El momento final debe ser posterior al momento de inicio.

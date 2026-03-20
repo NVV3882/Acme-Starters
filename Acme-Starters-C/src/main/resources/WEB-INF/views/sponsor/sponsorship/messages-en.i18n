@@ -6,8 +6,6 @@ sponsor.sponsorship.list.label.ticker = Ticker
 sponsor.sponsorship.list.label.name = Name
 sponsor.sponsorship.list.label.startMoment = Start moment
 sponsor.sponsorship.list.label.endMoment = End moment
-sponsor.sponsorship.list.label.monthsActive = Months active
-sponsor.sponsorship.list.label.totalMoney = Total money
 sponsor.sponsorship.list.label.draftMode = Draft mode
 
 sponsor.sponsorship.list.button.create = Create sponsorship
@@ -20,7 +18,6 @@ sponsor.sponsorship.form.label.description = Description
 sponsor.sponsorship.form.label.startMoment = Start moment
 sponsor.sponsorship.form.label.endMoment = End moment
 sponsor.sponsorship.form.label.moreInfo = More information
-sponsor.sponsorship.form.label.draftMode = Draft mode
 sponsor.sponsorship.form.label.monthsActive = Months active
 sponsor.sponsorship.form.label.totalMoney = Total money
 

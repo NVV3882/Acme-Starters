@@ -6,8 +6,6 @@ any.audit-report.list.label.ticker = Ticker
 any.audit-report.list.label.name = Nombre
 any.audit-report.list.label.startMoment = Fecha de inicio
 any.audit-report.list.label.endMoment = Fecha de fin
-any.audit-report.list.label.monthsActive = Meses activo
-any.audit-report.list.label.hours = Horas totales
 
 any.audit-report.form.title = Detalles del informe de auditoría
 

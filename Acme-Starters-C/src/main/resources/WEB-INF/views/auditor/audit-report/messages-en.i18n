@@ -6,8 +6,6 @@ auditor.audit-report.list.label.ticker = Ticker
 auditor.audit-report.list.label.name = Name
 auditor.audit-report.list.label.startMoment = Start moment
 auditor.audit-report.list.label.endMoment = End moment
-auditor.audit-report.list.label.monthsActive = Months active
-auditor.audit-report.list.label.hours = Total hours
 auditor.audit-report.list.label.draftMode = Draft mode
 auditor.audit-report.list.button.create = Create report
 
@@ -32,4 +30,3 @@ auditor.audit-report.form.button.save = Save
 
 # Error messages
 auditor.audit-report.form.error.noSections = You cannot publish a report without at least one audit section.
-auditor.audit-report.form.error.incorrectDates = The end moment must be after the start moment.

@@ -6,8 +6,6 @@ any.sponsorship.list.label.ticker = Ticker
 any.sponsorship.list.label.name = Nombre
 any.sponsorship.list.label.startMoment = Fecha de inicio
 any.sponsorship.list.label.endMoment = Fecha de fin
-any.sponsorship.list.label.monthsActive = Meses activo
-any.sponsorship.list.label.totalMoney = Dinero total
 
 
 any.sponsorship.form.title = Detalles del patrocinio

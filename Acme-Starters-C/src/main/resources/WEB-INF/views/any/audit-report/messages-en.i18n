@@ -6,8 +6,6 @@ any.audit-report.list.label.ticker = Ticker
 any.audit-report.list.label.name = Name
 any.audit-report.list.label.startMoment = Start moment
 any.audit-report.list.label.endMoment = End moment
-any.audit-report.list.label.monthsActive = Months active
-any.audit-report.list.label.hours = Total hours
 
 
 any.audit-report.form.title = Audit report details

@@ -6,8 +6,6 @@ any.invention.list.label.ticker = Ticker
 any.invention.list.label.name = Name
 any.invention.list.label.startMoment = Start moment
 any.invention.list.label.endMoment = End moment
-any.invention.list.label.monthsActive = Months active
-any.invention.list.label.totalMoney =  Cost
 any.invention.list.label.draftMode = DraftMode
 
 
