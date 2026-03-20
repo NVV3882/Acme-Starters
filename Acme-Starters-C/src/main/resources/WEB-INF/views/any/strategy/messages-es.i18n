@@ -2,7 +2,6 @@ any.strategy.list.title = Lista de estrategias publicadas
 
 any.strategy.list.label.ticker = Ticker
 any.strategy.list.label.name = Nombre
-any.strategy.list.label.description = Descripción
 any.strategy.list.label.startMoment = Fecha de inicio
 any.strategy.list.label.endMoment = Fecha de fin
 

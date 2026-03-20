@@ -18,3 +18,11 @@ acme.validation.Invention.duplicated-ticker.message  = The ticker is already in 
 acme.validation.invention.published-without-parts.message = The Invention can not be published unless it has 1 part minimum
 acme.validation.invention.incorrect-dates-intervale.message = The start moment of an invention must be before the end moment if the invention is published. Additionally, the startMoment and endMoment must be after the baseMoment
 acme.validation.invention.currency.message = The application only accept money with the currency Euros
+
+acme.validation.strategy.tactics.error = A strategy cannot be published without at least one tactic
+acme.validation.strategy.dates.error = The start date must be earlier than the end date
+acme.validation.strategy.startMoment.future = The start date must be in the future
+acme.validation.strategy.endMoment.future = The end date must be in the future
+acme.validation.strategy.duplicated-ticker.message = The strategy ticker is already in use
+acme.validation.strategy.publicado-sin-tactics.message = A strategy cannot be published without at least one tactic
+acme.validation.strategy.intervalo-correcto-tiempo.message = The interval between start and end must be valid and in the future for a published strategy

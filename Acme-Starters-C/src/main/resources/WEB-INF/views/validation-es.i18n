@@ -19,3 +19,11 @@ acme.validation.Invention.duplicated-ticker.message  = El código identificador 
 acme.validation.invention.published-without-parts.message = Las invenciones no pueden publicarse a menos que contengan al menos una parte
 acme.validation.invention.incorrect-dates-intervale.message = El momento de inicio de una Invención debe haber ocurrido antes del momento final siempre que la invencion esta publicada. Además, las fechas startMoment y endMoment deben ser posteriores al baseMoment.
 acme.validation.invention.currency.message = Solo se acepta dinero en divisa Euro. 
+
+acme.validation.strategy.tactics.error = No se puede publicar una estrategia sin al menos una táctica
+acme.validation.strategy.dates.error = La fecha de inicio debe ser anterior a la fecha de fin
+acme.validation.strategy.startMoment.future = La fecha de inicio debe estar en el futuro
+acme.validation.strategy.endMoment.future = La fecha de fin debe estar en el futuro
+acme.validation.strategy.duplicated-ticker.message = El ticker de la estrategia ya existe
+acme.validation.strategy.publicado-sin-tactics.message = No se puede publicar una estrategia sin al menos una táctica
+acme.validation.strategy.intervalo-correcto-tiempo.message = El intervalo entre inicio y fin debe ser válido y futuro para una estrategia publicada
