@@ -18,4 +18,3 @@ auditor.audit-section.form.label.kind = Kind:
 auditor.audit-section.form.button.create = Create
 auditor.audit-section.form.button.update = Update
 auditor.audit-section.form.button.delete = Delete
-auditor.audit-section.form.button.save = Save
