@@ -33,20 +33,4 @@ public interface InventorInventionRepository extends AbstractRepository {
 	@Query("select p from Part p where p.invention.id = :inventionId")
 	Collection<Part> findPartsByInventionId(int inventionId);
 
-	//	
-	//	@Query("select sum(d.workLoad) from Duty d where d.job.id = :jobId")
-	//	Double computeWorkLoadByJobId(int jobId);
-	//
-	//	@Query("select c from Company c")
-	//	Collection<Company> findAllContractors();
-	//
-	//	@Query("select c from Company c where c.id = :contractorId")
-	//	Company findContractorById(int contractorId);
-	//
-	//	@Query("select wf.contractor from WorksFor wf where wf.proxy.id = :proxyId")
-	//	Collection<Company> findContractorsByProxyId(int proxyId);
-	//
-	//	@Query("select wf from WorksFor wf where wf.proxy.id = :proxyId and wf.contractor.id = :contractorId")
-	//	WorksFor findWorksForByProxyAndContractorId(int proxyId, int contractorId);
-
 }

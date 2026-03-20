@@ -31,5 +31,8 @@ inventor.invention.form.button.create = Create
 inventor.invention.list.label.ticker = Ticker
 inventor.invention.list.label.name = Name
 inventor.invention.list.label.description = Description
+inventor.invention.list.label.startMoment = Start Moment
+inventor.invention.list.label.endMoment = End Moment
+inventor.invention.list.label.draftMode = DraftMode
 
 inventor.invention.list.button.create = Create

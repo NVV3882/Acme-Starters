@@ -12,7 +12,8 @@
 	<acme:form-url code="any.invention.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-double code="any.invention.form.label.monthsActive" path="monthsActive"/>
 	<acme:form-money code="any.invention.form.label.cost" path="cost"/>
-	
+	<acme:form-money code="any.invention.form.label.draftMode" path="draftMode"/>
+		
 	<acme:button code="any.invention.form.button.parts" action="/any/part/list?inventionId=${id}"/>
 	<acme:button code="any.invention.form.button.inventor" action="/any/inventor/show?inventionId=${id}"/>
 	

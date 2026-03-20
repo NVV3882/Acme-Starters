@@ -19,4 +19,5 @@ acme.validation.Invention.duplicated-ticker.message  = El código identificador 
 acme.validation.invention.published-without-parts.message = Las invenciones no pueden publicarse a menos que contengan al menos una parte
 acme.validation.invention.incorrect-dates-intervale.message = El momento de inicio de una Invención debe haber ocurrido antes del momento final siempre que la invencion esta publicada. Además, las fechas startMoment y endMoment deben ser posteriores al baseMoment.
 acme.validation.invention.currency.message = Solo se acepta dinero en divisa Euro. 
+
 acme.validation.invention.correctsMoments.message = En el momento de publicación de un invento, ambas fechas deben ser futuras, y el fecha de inicio debe ser antes de la fecha de fin.

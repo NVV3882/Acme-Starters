@@ -4,7 +4,6 @@ package acme.features.inventor.part;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.models.Tuple;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.invention.Invention;
@@ -26,13 +25,11 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 	@Override
 	public void load() {
 		int inventionId;
-		Invention invention;
-
 		inventionId = super.getRequest().getData("inventionId", int.class);
-		invention = this.repository.findInventionByInventionId(inventionId);
+		this.invention = this.repository.findInventionByInventionId(inventionId);
 
 		this.part = super.newObject(Part.class);
-		this.part.setInvention(invention);
+		this.part.setInvention(this.invention);
 	}
 
 	@Override
@@ -61,16 +58,11 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 
 	@Override
 	public void unbind() {
-
-		SelectChoices choices = SelectChoices.from(PartKind.class, this.part.getKind());
-
-		Tuple tupla = super.unbindObject(this.part, "name", "description", "cost", "kind");
-		tupla.put("inventionId", super.getRequest().getData("inventionId", int.class));
-
-		// tupla.put("draftMode", this.part.getInvention().getDraftMode());
-
-		tupla.put("kinds", choices);
-
+		super.unbindObject(this.part, "name", "description", "cost", "kind");
+		super.unbindGlobal("draftMode", this.part.getInvention().getDraftMode());
+		super.unbindGlobal("inventionId", this.invention.getId());
+		SelectChoices kinds = SelectChoices.from(PartKind.class, this.part.getKind());
+		super.unbindGlobal("kinds", kinds);
 	}
 
 }

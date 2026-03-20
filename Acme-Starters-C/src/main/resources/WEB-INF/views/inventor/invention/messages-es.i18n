@@ -31,5 +31,9 @@ inventor.invention.form.button.create = Crear
 inventor.invention.list.label.ticker = Referencia
 inventor.invention.list.label.name = Nombre
 inventor.invention.list.label.description = Descripción
+inventor.invention.list.label.startMoment = Momento inicio
+inventor.invention.list.label.endMoment = Momento final
+inventor.invention.list.label.draftMode = Modo borrador
+
 
 inventor.invention.list.button.create = Crear

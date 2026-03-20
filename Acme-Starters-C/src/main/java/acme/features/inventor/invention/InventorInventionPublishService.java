@@ -36,7 +36,6 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 	@Override
 	public void load() {
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		this.invention = this.repository.findInventionById(id);
 	}
@@ -78,6 +77,7 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 	@Override
 	public void unbind() {
 		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "monthsActive", "cost");
+		super.unbindGlobal("inventorId", this.invention.getInventor().getId());
 	}
 
 }

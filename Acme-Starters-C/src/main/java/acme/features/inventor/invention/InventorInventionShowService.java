@@ -35,7 +35,6 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 	@Override
 	public void load() {
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		this.invention = this.repository.findInventionById(id);
 	}
@@ -45,7 +44,7 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 		boolean status;
 
 		status = this.invention != null && //
-			(this.invention.getInventor().isPrincipal() || !this.invention.getDraftMode());
+			(this.invention.getInventor().isPrincipal() || this.invention.getDraftMode().equals(false));
 
 		super.setAuthorised(status);
 	}
@@ -53,7 +52,7 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 	@Override
 	public void unbind() {
 		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "monthsActive", "cost");
-
+		super.unbindGlobal("inventorId", this.invention.getInventor().getId());
 	}
 
 }

@@ -22,13 +22,13 @@
 	<acme:form-moment code="inventor.invention.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment code="inventor.invention.form.label.endMoment" path="endMoment"/>
 	<acme:form-url code="inventor.invention.form.label.moreInfo" path="moreInfo"/>
-	<acme:form-double code="inventor.invention.form.label.monthsActive" path="monthsActive"/>
-	<acme:form-money code="inventor.invention.form.label.cost" path="cost"/>
-	<acme:form-checkbox code="inventor.invention.form.label.draftMode" path="draftMode"/>
+	<acme:form-double code="inventor.invention.form.label.monthsActive" path="monthsActive" readonly="true"/>
+	<acme:form-money code="inventor.invention.form.label.cost" path="cost" readonly="true"/>
+	<acme:form-checkbox code="inventor.invention.form.label.draftMode" path="draftMode" readonly="true"/>
 	
 
 	<jstl:choose>	 
-		<jstl:when test="${_command == 'show'}">
+		<jstl:when test="${_command == 'show' && draftMode == false}">
 			<acme:button code="inventor.invention.form.button.parts" action="/inventor/parts/list?inventionId=${id}"/>			
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">

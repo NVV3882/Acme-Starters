@@ -19,6 +19,8 @@ public class InventorPartListService extends AbstractService<Inventor, Part> {
 
 	Collection<Part>		partes;
 
+	private Invention		invention;
+
 
 	@Override
 	public void load() {
@@ -27,20 +29,19 @@ public class InventorPartListService extends AbstractService<Inventor, Part> {
 	}
 	@Override
 	public void authorise() {
-		Boolean res;
+		Boolean res = false;
 		int inventionId = super.getRequest().getData("inventionId", int.class);
-		Invention invention = this.repositorio.findInventionByInventionId(inventionId);
-		if (invention.getInventor().isPrincipal())
+		this.invention = this.repositorio.findInventionByInventionId(inventionId);
+		if (this.invention != null && this.invention.getInventor().isPrincipal())
 			res = true;
-		else
-			res = false;
 		super.setAuthorised(res);
 	}
 	@Override
 	public void unbind() {
-		int inventionId = super.getRequest().getData("inventionId", int.class);
+
 		super.unbindObjects(this.partes, "name", "description", "cost", "kind");
-		super.unbindGlobal("inventionId", inventionId);
+		super.unbindGlobal("draftMode", this.invention.getDraftMode());
+		super.unbindGlobal("inventionId", this.invention.getId());
 
 	}
 }

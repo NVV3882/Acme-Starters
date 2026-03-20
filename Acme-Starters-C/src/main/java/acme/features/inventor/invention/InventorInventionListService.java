@@ -38,6 +38,8 @@ public class InventorInventionListService extends AbstractService<Inventor, Inve
 	public void authorise() {
 		if (super.getRequest().getPrincipal().hasRealmOfType(Inventor.class))
 			super.setAuthorised(true);
+		else
+			super.setAuthorised(false);
 	}
 
 	@Override
