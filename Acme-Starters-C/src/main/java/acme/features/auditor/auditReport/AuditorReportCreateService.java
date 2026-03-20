@@ -4,7 +4,6 @@ package acme.features.auditor.auditReport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.audit.AuditReport;
 import acme.realms.Auditor;
@@ -47,13 +46,6 @@ public class AuditorReportCreateService extends AbstractService<Auditor, AuditRe
 	public void validate() {
 		super.validateObject(this.auditReport);
 
-		if (!this.getResponse().getErrors().hasErrors()) {
-			boolean correctDates = true;
-			if (this.auditReport.getStartMoment() != null && this.auditReport.getEndMoment() != null)
-				if (MomentHelper.isAfter(this.auditReport.getStartMoment(), this.auditReport.getEndMoment()))
-					correctDates = false;
-			this.state(correctDates, "endMoment", "auditor.audit-report.form.error.incorrectDates");
-		}
 	}
 
 	@Override

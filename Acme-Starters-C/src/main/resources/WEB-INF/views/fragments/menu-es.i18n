@@ -14,7 +14,7 @@ master.menu.anonymous = Anónimo
 master.menu.anonymous.list-inventions = Lista inventos
 master.menu.anonymous.sponsorships = Patrocinios
 master.menu.anonymous.strategies = Estrategias
-master.menu.anonymous.auditReports = Reportes de auditoría
+master.menu.anonymous.auditReports = Informes de auditoría
 master.menu.anonymous.campaigns = Campañas
 
 
@@ -24,6 +24,7 @@ master.menu.authenticated = Cualquiera
 master.menu.authenticated.list-inventions = Lista inventos
 master.menu.authenticated.list-strategies = Lista strategias
 master.menu.authenticated.list-sponsorships = Lista patrocinios
+master.menu.authenticated.list-audit-reports = Lista Informes de Auditoría
 
 # master.menu.administrator ###################################################
 
@@ -41,7 +42,7 @@ master.menu.sponsor.list-my-sponsorships = Mis patrocinios
 # master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
-master.menu.auditor.favourite-link = Favourite link
+master.menu.auditor.list-my-audit-reports = Listar mis informes de auditoría
 
 # master.menu.user-account ####################################################
 

@@ -24,6 +24,7 @@ master.menu.authenticated = Any
 master.menu.authenticated.list-inventions = List of Inventions
 master.menu.authenticated.list-strategies = List of Strategies
 master.menu.authenticated.list-sponsorships = List of Sponsorships
+master.menu.authenticated.list-audit-reports = List of Audit Reports
 
 # master.menu.administrator ###################################################
 
@@ -41,7 +42,7 @@ master.menu.sponsor.list-my-sponsorships = My sponsorships
 # master.menu.auditor ##########################################################
 
 master.menu.auditor = Auditor
-master.menu.auditor.favourite-link = Favourite link
+master.menu.auditor.list-my-audit-reports = My audit reports
 
 # master.menu.user-account ####################################################
 
@@ -68,6 +69,9 @@ master.menu.fundraiser.list-strategies = List of my strategies
 
 master.menu.spokesperson = Spokesperson
 master.menu.spokesperson.list-campaigns = List of my campaigns
+
+master.menu.spokesperson = Auditor
+master.menu.spokesperson.list-campaigns = List of my audit reports
 
 
 

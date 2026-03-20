@@ -19,3 +19,13 @@ acme.validation.Invention.duplicated-ticker.message  = El código identificador 
 acme.validation.invention.published-without-parts.message = Las invenciones no pueden publicarse a menos que contengan al menos una parte
 acme.validation.invention.incorrect-dates-intervale.message = El momento de inicio de una Invención debe haber ocurrido antes del momento final siempre que la invencion esta publicada. Además, las fechas startMoment y endMoment deben ser posteriores al baseMoment.
 acme.validation.invention.currency.message = Solo se acepta dinero en divisa Euro. 
+
+
+acme.validation.audit-report.duplicated-ticker.message = Referencia ya usada
+acme.validation.audit-report.correct-audit-sections.message = Un informe de auditoría no puede publicarse sin al menos una sección
+acme.validation.audit-report.incorrect-dates-intervale.message = El intervalo del comienzo y el final de un informe de auditoría se debe encontrar en un momento futuro desde que se publica el informe de auditoría
+
+acme.validation.audit-report.donations.error = El informe de auditoría debe tener al menos una sección en el momento de su publicación
+acme.validation.audit-report.dates.error = El momento de inicio y el momento de fin deben formar un intervalo válido
+acme.validation.audit-report.startMoment.future = El startMoment debe ser posterior al momento de publicación
+acme.validation.audit-report.endMoment.future = El endMoment debe ser posterior al momento de publicación
