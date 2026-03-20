@@ -66,7 +66,7 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 			Collection<Part> parts = this.repository.findPartsByInventionId(this.invention.getId());
 			MinimoUnaParteParaSerPublicado = parts.size() >= 1;
 
-			super.state(MinimoUnaParteParaSerPublicado, "*", "acme.validation.invention.MinimoUnaParteParaSerPublicado");
+			super.state(MinimoUnaParteParaSerPublicado, "*", "acme.validation.invention.published-without-parts.message");
 
 		}
 		{
@@ -75,10 +75,29 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 			boolean startNotNull = this.invention.getStartMoment() != null;
 			boolean endNotNull = this.invention.getEndMoment() != null;
 
-			correctIntervale = startNotNull && endNotNull && MomentHelper.isFuture(this.invention.getStartMoment()) && MomentHelper.isFuture(this.invention.getEndMoment())
-				&& MomentHelper.isAfter(this.invention.getEndMoment(), this.invention.getStartMoment());
+			correctIntervale = startNotNull && endNotNull && MomentHelper.isFuture(this.invention.getStartMoment());
 
-			super.state(correctIntervale, "*", "acme.validation.invention.correctsMoments.message");
+			super.state(correctIntervale, "startMoment", "acme.validation.invention.correctsMoments.StartMomentFuture");
+		}
+		{
+			boolean correctIntervale;
+
+			boolean startNotNull = this.invention.getStartMoment() != null;
+			boolean endNotNull = this.invention.getEndMoment() != null;
+
+			correctIntervale = startNotNull && endNotNull && MomentHelper.isFuture(this.invention.getEndMoment());
+
+			super.state(correctIntervale, "endMoment", "acme.validation.invention.correctsMoments.EndMomentFuture");
+		}
+		{
+			boolean correctIntervale;
+
+			boolean startNotNull = this.invention.getStartMoment() != null;
+			boolean endNotNull = this.invention.getEndMoment() != null;
+
+			correctIntervale = startNotNull && endNotNull && MomentHelper.isAfter(this.invention.getEndMoment(), this.invention.getStartMoment());
+
+			super.state(correctIntervale, "startMoment", "acme.validation.invention.correctsMoments.CorrectInterval");
 		}
 	}
 
