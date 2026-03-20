@@ -5,12 +5,12 @@
 
 <acme:form readonly="true">
 
-	<acme:form-textbox code="any.auditSection.form.label.name" path="name"/>
+	<acme:form-textbox code="any.audit-section.form.label.name" path="name"/>
 	
-	<acme:form-textarea code="any.auditSection.form.label.notes" path="notes"/>
+	<acme:form-textarea code="any.audit-section.form.label.notes" path="notes"/>
 	
-	<acme:form-integer code="any.auditSection.form.label.hours" path="hours"/>
+	<acme:form-integer code="any.audit-section.form.label.hours" path="hours"/>
 	
-	<acme:form-textbox code="any.auditSection.form.label.kind" path="kind"/>
+	<acme:form-textbox code="any.audit-section.form.label.kind" path="kind"/>
 
 </acme:form>

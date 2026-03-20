@@ -41,7 +41,6 @@ public class AuditorReportDeleteService extends AbstractService<Auditor, AuditRe
 
 	@Override
 	public void bind() {
-		super.bindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 	}
 
 	@Override

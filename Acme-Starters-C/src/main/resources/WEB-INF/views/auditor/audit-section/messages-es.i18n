@@ -17,6 +17,6 @@ auditor.audit-section.form.label.hours = Horas:
 auditor.audit-section.form.label.kind = Tipo:
 
 auditor.audit-section.form.button.create = Crear
-auditor.audit-section.form.button.update = Actualizar
+auditor.audit-section.form.button.update = Editar
 auditor.audit-section.form.button.delete = Eliminar
 auditor.audit-section.form.button.save = Guardar

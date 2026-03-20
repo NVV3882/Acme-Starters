@@ -1,7 +1,5 @@
-
 package acme.features.auditor.auditReport;
 
-import java.time.temporal.ChronoUnit;
 import java.util.Collection;
 import java.util.Date;
 
@@ -43,27 +41,69 @@ public class AuditorReportPublishService extends AbstractService<Auditor, AuditR
 
 	@Override
 	public void bind() {
+		// The publish custom command is typically invoked with a minimal request (only id).
+		// Binding requires the request to contain the properties listed; if the
+		// request doesn't include them (e.g. a simple publish action), skip binding
+		// to avoid Tuple.filterIn / BinderHelper assertions such as "Property 'ticker' not found in data record"
+		if (this.getRequest().getData().containsKey("ticker") || this.getRequest().getData().containsKey("startMoment")) {
+			super.bindObject(this.report, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+		}
 	}
 
 	@Override
 	public void validate() {
 
-		super.validateObject(this.report);
+		boolean requestHasFields = this.getRequest().getData().containsKey("ticker") || this.getRequest().getData().containsKey("startMoment") || this.getRequest().getData().containsKey("endMoment");
 
-		boolean intervaloCorrectoTiempo;
-		Date fechaInicio = this.report.getStartMoment();
-		Date fechaFinal = this.report.getEndMoment();
-		if (fechaInicio != null && fechaFinal != null)
-			intervaloCorrectoTiempo = MomentHelper.computeDifference(fechaInicio, fechaFinal, ChronoUnit.DAYS) >= 1 && MomentHelper.isAfter(fechaFinal, fechaInicio);
-		else
-			intervaloCorrectoTiempo = true;
+		if (requestHasFields) {
+			super.validateObject(this.report);
+		}
+		{
+			Collection<AuditSection> sections;
+			sections = this.repository.findSectionsByAuditReportId(this.report.getId());
+			if (sections == null || sections.isEmpty())
+				this.state(false, "publish", "auditor.audit-report.form.error.noSections");
+		}
 
-		this.state(intervaloCorrectoTiempo, "publish", "auditor.audit-report.form.error.incorrectDates");
+		{
+			Date start;
+			Date end;
+			boolean validInterval;
 
-		Collection<AuditSection> sections;
-		sections = this.repository.findSectionsByAuditReportId(this.report.getId());
-		if (sections == null || sections.isEmpty())
-			this.state(false, "publish", "auditor.audit-report.form.error.noSections");
+			start = this.report.getStartMoment();
+			end = this.report.getEndMoment();
+			validInterval = start != null && end != null && MomentHelper.isAfter(end, start);
+			if (requestHasFields)
+				super.state(validInterval, "startMoment", "acme.validation.sponsorship.dates.error");
+			else
+				this.state(validInterval, "publish", "acme.validation.sponsorship.dates.error");
+		}
+
+		{
+
+			Date now;
+			Date start;
+			Date end;
+			boolean startInFuture;
+			boolean endInFuture;
+
+			now = MomentHelper.getCurrentMoment();
+			start = this.report.getStartMoment();
+			end = this.report.getEndMoment();
+
+			startInFuture = start != null && MomentHelper.isAfter(start, now);
+			if (requestHasFields)
+				super.state(startInFuture, "startMoment", "acme.validation.audit-report.startMoment.future");
+			else
+				this.state(startInFuture, "publish", "acme.validation.audit-report.startMoment.future");
+
+			endInFuture = end != null && MomentHelper.isAfter(end, now);
+			if (requestHasFields)
+				super.state(endInFuture, "endMoment", "acme.validation.audit-report.endMoment.future");
+			else
+				this.state(endInFuture, "publish", "acme.validation.audit-report.endMoment.future");
+
+		}
 	}
 
 	@Override

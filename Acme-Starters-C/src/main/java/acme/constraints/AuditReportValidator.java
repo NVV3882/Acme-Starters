@@ -1,7 +1,6 @@
 
 package acme.constraints;
 
-import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.validation.ConstraintValidatorContext;
@@ -42,24 +41,25 @@ public class AuditReportValidator extends AbstractValidator<ValidAuditReport, Au
 				auditExistente = this.repositorio.findAuditReportByTicker(audit.getTicker());
 				auditUnico = auditExistente == null || auditExistente.equals(audit);
 
-				super.state(context, auditUnico, "ticker", "acme.validation.audit.duplicated-ticker.message");
+				super.state(context, auditUnico, "ticker", "acme.validation.audit-report.duplicated-ticker.message");
 			}
 			{
 				boolean auditSectionsCorrectos;
 
 				auditSectionsCorrectos = !this.repositorio.findAuditSectionsByAuditReportId(audit.getId()).isEmpty() || audit.getDraftMode();
-				super.state(context, auditSectionsCorrectos, "*", "acme.validation.audit.correct-audit-sections.message");
+				super.state(context, auditSectionsCorrectos, "*", "acme.validation.audit-report.correct-audit-sections.message");
 			}
 			{
-				boolean intervaloCorrectoTiempo;
-				Date fechaInicio = audit.getStartMoment();
-				Date fechaFinal = audit.getEndMoment();
-				if (audit.getDraftMode().equals(false) && fechaInicio != null && fechaFinal != null)
-					intervaloCorrectoTiempo = MomentHelper.computeDifference(fechaInicio, fechaFinal, ChronoUnit.DAYS) >= 1 && MomentHelper.isAfter(fechaFinal, fechaInicio);
-				else
-					intervaloCorrectoTiempo = true;
 
-				super.state(context, intervaloCorrectoTiempo, "*", "acme.validation.invention.incorrect-dates-intervale.message");
+				if (audit.getDraftMode().equals(false)) {
+					boolean intervaloCorrectoTiempo;
+					Date fechaInicio = audit.getStartMoment();
+					Date fechaFinal = audit.getEndMoment();
+
+					intervaloCorrectoTiempo = fechaInicio != null && fechaFinal != null && MomentHelper.isAfter(fechaFinal, fechaInicio);
+
+					super.state(context, intervaloCorrectoTiempo, "*", "acme.validation.audit-report.incorrect-dates-intervale.message");
+				}
 			}
 			result = !super.hasErrors(context);
 		}

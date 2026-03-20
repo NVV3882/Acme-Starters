@@ -1,15 +1,15 @@
 # messages-es.i18n
 
-any.auditSection.list.title = Lista de secciones de auditoría
+any.audit-section.list.title = Lista de secciones de auditoría
 
-any.auditSection.list.label.name = Nombre
-any.auditSection.list.label.hours = Horas
-any.auditSection.list.label.kind = Tipo
+any.audit-section.list.label.name = Nombre
+any.audit-section.list.label.hours = Horas
+any.audit-section.list.label.kind = Tipo
 
 
-any.auditSection.form.title = Detalles de la sección de auditoría
+any.audit-section.form.title = Detalles de la sección de auditoría
 
-any.auditSection.form.label.name = Nombre:
-any.auditSection.form.label.notes = Notas:
-any.auditSection.form.label.hours = Horas:
-any.auditSection.form.label.kind = Tipo:
+any.audit-section.form.label.name = Nombre:
+any.audit-section.form.label.notes = Notas:
+any.audit-section.form.label.hours = Horas:
+any.audit-section.form.label.kind = Tipo:

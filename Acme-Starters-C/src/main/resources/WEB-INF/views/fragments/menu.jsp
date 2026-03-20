@@ -31,6 +31,7 @@
 			<acme:menu-suboption code="master.menu.authenticated.list-inventions" action="/any/invention/list" />
 			<acme:menu-suboption code="master.menu.authenticated.list-strategies" action="/any/strategy/list" />
 			<acme:menu-suboption code="master.menu.authenticated.list-sponsorships" action="/any/sponsorship/list" />
+			<acme:menu-suboption code="master.menu.authenticated.list-audit-reports" action="/any/audit-report/list" />
 			<acme:menu-suboption code="master.menu.authenticated.list-campaigns" action="/any/campaign/list" />
 		</acme:menu-option>
 
@@ -44,7 +45,7 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.auditor" access="hasRealm('Auditor')">
-			<acme:menu-suboption code="master.menu.auditor.favourite-link" action="/auditor/audit-report/list"/>			
+			<acme:menu-suboption code="master.menu.auditor.list-my-audit-reports" action="/auditor/audit-report/list"/>			
        </acme:menu-option>
 
 		<acme:menu-option code="master.menu.sponsor" access="hasRealm('Sponsor')">
