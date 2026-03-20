@@ -26,7 +26,6 @@ auditor.audit-report.form.button.create = Create
 auditor.audit-report.form.button.update = Update
 auditor.audit-report.form.button.delete = Delete
 auditor.audit-report.form.button.publish = Publish
-auditor.audit-report.form.button.save = Save
 
 # Error messages
 auditor.audit-report.form.error.noSections = You cannot publish a report without at least one audit section.
