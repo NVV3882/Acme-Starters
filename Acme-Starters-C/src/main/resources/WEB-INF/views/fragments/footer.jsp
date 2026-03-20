@@ -38,4 +38,8 @@
 		<strong><acme:print code="master.company.name"/></strong>
 		<acme:footer-copyright code="master.company.name"/>
 	</div>
+
+	<div class="footer-logo" style="text-align:center; margin: 0.75rem auto 0 auto;">
+		<img src="${pageContext.request.contextPath}/images/logo.png" alt="ACME Starters" style="max-width: 80px; width: 100%; height: auto; display: inline-block;"/>
+	</div>
 </acme:footer-panel>
