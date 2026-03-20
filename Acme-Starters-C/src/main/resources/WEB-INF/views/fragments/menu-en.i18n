@@ -24,6 +24,8 @@ master.menu.authenticated = Any
 master.menu.authenticated.list-inventions = List of Inventions
 master.menu.authenticated.list-strategies = List of Strategies
 master.menu.authenticated.list-sponsorships = List of Sponsorships
+master.menu.authenticated.list-campaigns = List of Campaigns
+
 
 # master.menu.administrator ###################################################
 
