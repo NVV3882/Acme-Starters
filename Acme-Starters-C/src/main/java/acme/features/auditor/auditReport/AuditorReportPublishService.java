@@ -1,3 +1,4 @@
+
 package acme.features.auditor.auditReport;
 
 import java.util.Collection;
@@ -41,13 +42,8 @@ public class AuditorReportPublishService extends AbstractService<Auditor, AuditR
 
 	@Override
 	public void bind() {
-		// The publish custom command is typically invoked with a minimal request (only id).
-		// Binding requires the request to contain the properties listed; if the
-		// request doesn't include them (e.g. a simple publish action), skip binding
-		// to avoid Tuple.filterIn / BinderHelper assertions such as "Property 'ticker' not found in data record"
-		if (this.getRequest().getData().containsKey("ticker") || this.getRequest().getData().containsKey("startMoment")) {
+		if (this.getRequest().getData().containsKey("ticker") || this.getRequest().getData().containsKey("startMoment"))
 			super.bindObject(this.report, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
-		}
 	}
 
 	@Override
@@ -55,9 +51,8 @@ public class AuditorReportPublishService extends AbstractService<Auditor, AuditR
 
 		boolean requestHasFields = this.getRequest().getData().containsKey("ticker") || this.getRequest().getData().containsKey("startMoment") || this.getRequest().getData().containsKey("endMoment");
 
-		if (requestHasFields) {
+		if (requestHasFields)
 			super.validateObject(this.report);
-		}
 		{
 			Collection<AuditSection> sections;
 			sections = this.repository.findSectionsByAuditReportId(this.report.getId());
