@@ -14,10 +14,13 @@ acme.validation.sponsorship.dates.error = The start and end moment must be an in
 acme.validation.sponsorship.startMoment.future = The startMoment must be after the moment of publish
 acme.validation.sponsorship.endMoment.future = The endMoment must be after the moment of publish
 
-acme.validation.Invention.duplicated-ticker.message  = The ticker is already in use
+acme.validation.invention.duplicated-ticker.message  = The ticker is already in use
 acme.validation.invention.published-without-parts.message = The Invention can not be published unless it has 1 part minimum
 acme.validation.invention.incorrect-dates-intervale.message = The start moment of an invention must be before the end moment if the invention is published. Additionally, the startMoment and endMoment must be after the baseMoment
 acme.validation.invention.currency.message = The application only accept money with the currency Euros
+
+acme.validation.invention.correctsMoments.message = At the time of publication of an invention, both dates must be future, and the start date must be before the end date
+acme.validation.invention.MinimoUnaParteParaSerPublicado = The Invention can not be published unless it has 1 part minimum
 
 acme.validation.strategy.tactics.error = A strategy cannot be published without at least one tactic
 acme.validation.strategy.dates.error = The start date must be earlier than the end date
