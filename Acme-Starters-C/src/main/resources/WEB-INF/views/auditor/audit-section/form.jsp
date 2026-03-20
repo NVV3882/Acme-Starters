@@ -1,9 +1,10 @@
+
 <%@page%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
-<acme:form readonly="${_command ne 'update' and _command ne 'create'}">
+<acme:form>
 
 	<acme:form-textbox code="auditor.audit-section.form.label.name" path="name"/>
 	
@@ -14,14 +15,11 @@
 	<acme:form-select code="auditor.audit-section.form.label.kind" path="kind" choices="${kinds}"/>
 	
 	<jstl:choose>
-		<jstl:when test="${_command == 'show' && draftMode == true}">
-            <acme:button code="auditor.audit-section.form.button.update" action="/auditor/audit-section/update?id=${id}"/>
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete') && draftMode == true}">
+            <acme:submit code="auditor.audit-section.form.button.update" action="/auditor/audit-section/update?id=${id}"/>
             <acme:submit code="auditor.audit-section.form.button.delete" action="/auditor/audit-section/delete?id=${id}"/>
          </jstl:when>
 
-		<jstl:when test="${_command == 'update'}">
-            <acme:submit code="auditor.audit-section.form.button.save" action="/auditor/audit-section/update?id=${id}"/>
-         </jstl:when>
          
          <jstl:when test="${_command == 'create'}"> 
             <acme:submit code="auditor.audit-section.form.button.create" action="/auditor/audit-section/create?reportId=${reportId}"/>
