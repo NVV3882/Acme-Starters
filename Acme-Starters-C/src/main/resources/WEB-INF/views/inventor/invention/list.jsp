@@ -18,3 +18,4 @@
 </acme:list>
 
 <acme:button code="inventor.invention.list.button.create" action="/inventor/invention/create"/>
+

@@ -29,11 +29,13 @@ public class InventorPartListService extends AbstractService<Inventor, Part> {
 	}
 	@Override
 	public void authorise() {
-		Boolean res = false;
+		Boolean res;
 		int inventionId = super.getRequest().getData("inventionId", int.class);
 		this.invention = this.repositorio.findInventionByInventionId(inventionId);
 		if (this.invention != null && this.invention.getInventor().isPrincipal())
 			res = true;
+		else
+			res = false;
 		super.setAuthorised(res);
 	}
 	@Override

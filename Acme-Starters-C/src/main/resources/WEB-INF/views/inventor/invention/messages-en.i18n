@@ -19,7 +19,6 @@ inventor.invention.form.label.endMoment = End Moment:
 inventor.invention.form.label.moreInfo = More Info:
 inventor.invention.form.label.monthsActive = Months Active:
 inventor.invention.form.label.cost = Cost:
-inventor.invention.form.label.draftMode = Draft Mode?:
 
 		
 inventor.invention.form.button.parts = Parts

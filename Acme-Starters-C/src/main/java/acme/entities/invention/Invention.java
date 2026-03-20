@@ -87,7 +87,7 @@ public class Invention extends AbstractEntity {
 		Date fechaFin = this.endMoment;
 		if (fechaIni != null && fechaFin != null) {
 			Double res = MomentHelper.computeDifference(fechaIni, fechaFin, ChronoUnit.MONTHS);
-			return MathHelper.roundOff(res, 88); //da igual que ponga 88 o 36, siempre redondea a 2 decimales.
+			return MathHelper.roundOff(res, 1); //da igual que ponga 88 o 36, siempre redondea a 2 decimales.
 		} else
 			return 0.0;
 	}

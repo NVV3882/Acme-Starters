@@ -29,13 +29,10 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 
 	private Invention					invention;
 
-	// AbstractService interface ----------------------------------------------
-
 
 	@Override
 	public void load() {
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		this.invention = this.repository.findInventionById(id);
 	}
@@ -44,10 +41,9 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 	public void authorise() {
 		boolean status;
 
-		status = this.invention != null && this.invention.getDraftMode() && this.invention.getInventor().isPrincipal();
+		status = this.invention != null && this.invention.getDraftMode().equals(true) && this.invention.getInventor().isPrincipal();
 
 		super.setAuthorised(status);
-
 	}
 
 	@Override
@@ -69,7 +65,6 @@ public class InventorInventionUpdateService extends AbstractService<Inventor, In
 	@Override
 	public void unbind() {
 		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode", "monthsActive", "cost");
-		super.unbindGlobal("inventorId", this.invention.getInventor().getId());
 
 	}
 }

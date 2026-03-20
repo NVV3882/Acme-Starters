@@ -24,8 +24,8 @@ import acme.entities.invention.Part;
 @Repository
 public interface InventorInventionRepository extends AbstractRepository {
 
-	@Query("select i from Invention i where i.id = :id")
-	Invention findInventionById(int id);
+	@Query("select i from Invention i where i.id = :inventoId")
+	Invention findInventionById(int inventorId);
 
 	@Query("select i from Invention i where i.inventor.id = :inventorId")
 	Collection<Invention> findInventionsByInventorId(int inventorId);

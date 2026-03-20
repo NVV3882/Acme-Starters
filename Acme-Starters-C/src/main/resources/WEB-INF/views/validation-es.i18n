@@ -21,6 +21,7 @@ acme.validation.invention.incorrect-dates-intervale.message = El momento de inic
 acme.validation.invention.currency.message = Solo se acepta dinero en divisa Euro. 
 
 acme.validation.invention.correctsMoments.message = En el momento de publicación de un invento, ambas fechas deben ser futuras, y el fecha de inicio debe ser antes de la fecha de fin.
+acme.validation.invention.MinimoUnaParteParaSerPublicado = Las invenciones no pueden publicarse a menos que contengan al menos una parte.
 
 acme.validation.strategy.tactics.error = No se puede publicar una estrategia sin al menos una táctica
 acme.validation.strategy.dates.error = La fecha de inicio debe ser anterior a la fecha de fin

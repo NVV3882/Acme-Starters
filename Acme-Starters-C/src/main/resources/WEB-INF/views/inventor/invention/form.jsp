@@ -1,15 +1,3 @@
-<%--
-- form.jsp
--
-- Copyright (C) 2012-2026 Rafael Corchuelo.
--
-- In keeping with the traditional purpose of furthering education and research, it is
-- the policy of the copyright owner to permit non-commercial use and redistribution of
-- this software. It has been tested carefully, but it is not guaranteed for any particular
-- purposes.  The copyright owner does not offer any warranties or representations, nor do
-- they accept any liabilities with respect to them.
---%>
-
 <%@page%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -24,12 +12,10 @@
 	<acme:form-url code="inventor.invention.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-double code="inventor.invention.form.label.monthsActive" path="monthsActive" readonly="true"/>
 	<acme:form-money code="inventor.invention.form.label.cost" path="cost" readonly="true"/>
-	<acme:form-checkbox code="inventor.invention.form.label.draftMode" path="draftMode" readonly="true"/>
 	
-
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show' && draftMode == false}">
-			<acme:button code="inventor.invention.form.button.parts" action="/inventor/parts/list?inventionId=${id}"/>			
+			<acme:button code="inventor.invention.form.button.parts" action="/inventor/part/list?inventionId=${id}"/>			
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:button code="inventor.invention.form.button.parts" action="/inventor/part/list?inventionId=${id}"/>

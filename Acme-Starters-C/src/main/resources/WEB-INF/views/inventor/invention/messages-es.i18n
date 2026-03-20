@@ -19,7 +19,6 @@ inventor.invention.form.label.endMoment = Fecha límite:
 inventor.invention.form.label.moreInfo = Más Información:
 inventor.invention.form.label.monthsActive = Meses Activo: (Opcional)
 inventor.invention.form.label.cost = Coste:
-inventor.invention.form.label.draftMode = Modo borrador?:
 
 		
 inventor.invention.form.button.parts = Partes
